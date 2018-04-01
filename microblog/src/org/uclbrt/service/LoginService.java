@@ -19,28 +19,48 @@ public class LoginService implements SystemConstant {
 	private UserLoginMapper userLoginMapper;
 
 	public Map<String, Object> addUser(UserLogin user) {
-		if(user==null){
+		if (user == null) {
 			throw new RuntimeException("参数为空");
 		}
-		//判断用户名是否存在
-		UserLogin user_name= userLoginMapper.findByName(user.getUsername());
-		Map<String,Object> map = new HashMap<String,Object>(); 
-		if(user_name==null){
-			//数据库没有，插入该数据
+		// 判断用户名是否存在
+		UserLogin user_name = userLoginMapper.findByName(user.getUsername());
+		Map<String, Object> map = new HashMap<String, Object>();
+		if (user_name == null) {
+			// 数据库没有，插入该数据
 			user.setUsername(user.getUsername());
 			user.setPassword(Md5Util.md5(user.getPassword()));
 			Date d = new Date();
-//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			// SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd
+			// HH:mm:ss");
 			user.setCreate_time(d);
 			user.setRole_id('3');
 			userLoginMapper.save(user);
 			map.put("pass", true);
-		}else{
+		} else {
 			map.put("pass", false);
 		}
 		//
 		return map;
-
 	}
 
+	public Map<String, Object> checkLogin(String username, String password) {
+		if (username == null & password == null)
+			throw new RuntimeException("用户名或密码不能为空");
+
+		Map<String, Object> map = new HashMap<String, Object>();
+		UserLogin user = userLoginMapper.findByName(username);
+		if (user == null) {
+			map.put("status", NAME_ERROR);
+		} else {
+			System.out.println(user.getPassword());
+			System.out.println(Md5Util.md5(password));
+			if (user.getPassword().equals(Md5Util.md5(password))) {
+				map.put("status", SUCCESS);
+				map.put("user", user);
+			} else {
+				map.put("status", PASSWORD_ERROR);
+			}
+		}
+		return map;
+	}
 }

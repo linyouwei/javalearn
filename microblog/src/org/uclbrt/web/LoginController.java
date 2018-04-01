@@ -20,9 +20,22 @@ public class LoginController implements SystemConstant {
 	@RequestMapping("/register.form")
 	@ResponseBody
 	public Result toRegister(UserLogin user){
+		if(user==null){
+			throw new RuntimeException("参数为空");
+		}
 		System.out.println("into register");
 		Map<String,Object> map = loginService.addUser(user);
 		System.out.println("out register");
+		return new Result(map);
+	}
+	@RequestMapping("/checklogin.form")
+	@ResponseBody
+	public Result toLogin(String username,String password,HttpSession session){
+		Map<String,Object> map = loginService.checkLogin(username,password);
+		Object status = map.get("status");
+		if(status.equals(SUCCESS)){
+			session.setAttribute("user", map.get("user"));	
+		}
 		return new Result(map);
 	}
 
