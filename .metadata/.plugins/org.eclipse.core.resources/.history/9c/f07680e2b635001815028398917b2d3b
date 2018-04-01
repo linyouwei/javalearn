@@ -1,0 +1,177 @@
+/***
+ * 加载普通笔记本
+ */
+function loadNormalNoteBook(){
+	console.log("加载普通笔记本")
+	$.post("/cloudnote/notebook.form",
+		{},
+		function(result){
+			console.log("进入result");
+			var list = result.data;
+				if(result.success){
+					console.log("进入result.success");
+					//遍历list,添加list的结果到edit.html
+					$(list).each(function(){
+						console.log("进入遍历list函数")
+						var s = '<li class="online"><a class="unchecked"><i class="fa fa-book" title="笔记本" rel="tooltip-bottom"></i> '+this.cn_notebook_name+'<button type="button" class="btn btn-default btn-xs btn_position btn_delete"><i class="fa fa-times"></i></button></a></li>'
+						$("#first_side_right ul").append(s);
+						$("#first_side_right ul li:last").data("notebook",this)
+					});	
+				}else{
+					alert(result.message);
+				}
+			
+		
+		});
+}
+
+/***
+ * 加载特殊笔记本
+ */
+function loadSpecialNoteBook(){
+	alert("加载特殊笔记本");
+	$.post("/cloudnote/findspecial.form",
+		{},
+		function(result){
+			console.log("进入result");
+			var list = result.data;
+				if(result.success){
+					console.log("进入special中result.success");
+					//遍历list,添加list的结果到edit.html
+					$(list).each(function(){
+						console.log(this);
+						console.log("进入special中的list方法");
+						if(this.cn_notebook_type_id=="1"){//收藏	
+							console.log("1");
+							$("#like_button").data("notebook",this);
+							console.log("11");
+						}else if(this.cn_notebook_type_id=="2"){//回收
+							$("#rollback_button").data("notebook",this);
+							console.log("2");
+						}else if(this.cn_notebook_type_id=="3"){//活动
+							$("#action_button").data("notebook",this);
+							console.log("3");
+						}else {//推送(默认)
+							$("#first_side_right ul li:first").data("notebook",this);
+							console.log("4");
+						}
+						//打印出绑定的特殊笔记本
+					});	
+						console.log($("#like_button").data("notebook").cn_notebook_name);
+						console.log($("#rollback_button").data("notebook").cn_notebook_name);
+						console.log($("#action_button").data("notebook").cn_notebook_name);
+						console.log($("#first_side_right ul li:first").data("notebook").cn_notebook_name);	
+				}else{
+					alert(result.message);
+				}
+			
+		
+		});
+	
+	
+}
+
+/****
+ * 添加笔记本
+ */
+function addNoteBook(){
+	alert("添加笔记本");
+	var new_book_name=$("#input_notebook").val();
+	console.log(new_book_name);
+	$.post("/cloudnote/addnewbook.form",{"new_book_name":new_book_name},
+		function(result){
+			var notebook = result.data
+			if(result.success){
+				console.log("进入result.success方法")
+				//关闭弹出框
+				$('.close,.cancle').trigger('click');
+				var s = '<li class="online"><a class="unchecked"><i class="fa fa-book" title="笔记本" rel="tooltip-bottom"></i> '+notebook.cn_notebook_name+'<button type="button" class="btn btn-default btn-xs btn_position btn_delete"><i class="fa fa-times"></i></button></a></li>'
+				$("#first_side_right ul").append(s);
+				$("#first_side_right ul li:last").data("notebook",this)
+			}else{
+				alert(result.message);
+			}
+		}
+		);
+}
+
+/***
+ * 重命名笔记本
+ */
+function updateNoteBook(new_name,li){
+	console.log("into updateNoteBook");
+	console.log(new_name);
+	var notebook = li.data("notebook");
+	notebook.cn_notebook_name = new_name;
+	console.log(notebook);
+	$.post(
+		"/cloudnote/updateBook.form",
+		//传入一个notebook对象
+		notebook,
+		function(result) {
+			if(result.success) {
+				//成功
+				//关闭弹出框
+				$(".close,.cancle").trigger("click");
+				//将li中的笔记本名换成新名称
+				var a = '<a class="checked"><i class="fa fa-book" title="笔记本" rel="tooltip-bottom"></i> '+new_name+'<button type="button" class="btn btn-default btn-xs btn_position btn_delete"><i class="fa fa-times"></i></button></a>';
+				li.html(a);
+				//将修改后的数据绑定到li
+				li.data("notebook",notebook);
+			} else {
+				//失败
+				alert(result.message);
+			}
+		}
+	);
+}
+
+/***
+ * 删除笔记本
+ */
+function deleteNoteBook(li){
+	alert("删除笔记本");
+	var notebook = li.data("notebook")
+	var cn_notebook_id = notebook.cn_notebook_id;
+	console.log(notebook);
+	console.log(notebook.cn_notebook_id);
+	$.post("/cloudnote/deleteNoteBook.form",
+		{"cn_notebook_id":cn_notebook_id},
+		function(result){
+			if(result.success){
+				li.remove();
+				$("#modalBasic_6,.cancle").trigger("click");
+				
+			}else{
+				alert(result.message);
+			}
+		});
+	
+}
+
+/**
+ * 将笔记本列表放置到select组件中
+ */
+function setNoteBookToSelect(){
+
+	console.log("nohaodd");
+	$.post("/cloudnote/findTwoTypeBook.form",
+		{},
+		function(result){
+			console.log("进入result")
+			if(result.success){
+				//把获取到的list插入到select
+				var list = result.data;
+				console.log(list);
+				$(list).each(
+					function(){
+						var ht = '<option value="'+this.cn_notebook_id+'">'+this.cn_notebook_name+'</option>'
+						$("#moveSelect").append(ht);
+					});
+				
+			}else{
+				alert(result.message);
+			}
+		});
+	
+}

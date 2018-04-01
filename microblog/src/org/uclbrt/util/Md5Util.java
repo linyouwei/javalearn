@@ -46,7 +46,7 @@ public class Md5Util {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(md5("111111"));
+		System.out.println(md5("111111b"));
 	}
 
 }

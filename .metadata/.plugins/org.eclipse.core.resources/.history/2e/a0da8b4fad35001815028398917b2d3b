@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="org.tarena.dao.UserLoginMapper">
+	<select id="findByName" resultType="org.uclbrt.entity.UserLogin"
+		parameterType="string">
+		select * from user_login where username= #{username};
+	</select>
+	<insert id="save" parameterType="org.uclbrt.entity.UserLogin">
+		insert into user_login values
+		(#{username},#{password},#{create_time},#{role_id});
+	</insert>
+</mapper>

@@ -10,35 +10,37 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.uclbrt.dao.UserLoginMapper;
 import org.uclbrt.entity.UserLogin;
+import org.uclbrt.util.Md5Util;
 import org.uclbrt.util.SystemConstant;
 
 @Service
-public class LoginService implements SystemConstant{
+public class LoginService implements SystemConstant {
 	@Resource
-	private UserLoginMapper userLoginMapper;	
-	@Resource
-	public Map<String,Object> addUser(UserLogin user){
-		//判斷是否有重名
-		UserLogin user_name = userLoginMapper.findByName(user.getUsername());
+	private UserLoginMapper userLoginMapper;
+
+	public Map<String, Object> addUser(UserLogin user) {
+		if(user==null){
+			throw new RuntimeException("参数为空");
+		}
+		//判断用户名是否存在
+		UserLogin user_name= userLoginMapper.findByName(user.getUsername());
 		Map<String,Object> map = new HashMap<String,Object>(); 
 		if(user_name==null){
-			//若數據庫沒有該數據，插入數據庫
-			user.setPassword(user.getPassword());
+			//数据库没有，插入该数据
 			user.setUsername(user.getUsername());
+			user.setPassword(Md5Util.md5(user.getPassword()));
 			Date d = new Date();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			user.setCreate_time(d);
 			user.setRole_id('3');
 			userLoginMapper.save(user);
-			//
 			map.put("pass", true);
 		}else{
-			//若數據庫有該數據返回錯誤提示
 			map.put("pass", false);
-			
 		}
+		//
 		return map;
-		
+
 	}
-	
-	}
+
+}

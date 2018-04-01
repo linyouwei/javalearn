@@ -1,0 +1,9 @@
+package org.tarena.dao;
+
+import org.tarena.entity.User;
+
+public interface UserMapper {
+	User findByName(String username);
+	void save(User user);
+	void changepwd(User user);
+}

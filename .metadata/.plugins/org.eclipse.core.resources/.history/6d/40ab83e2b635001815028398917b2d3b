@@ -1,0 +1,286 @@
+/***
+ * 加载普通笔记
+ */
+function getNormalNoteList(notebook_id){
+	console.log("加载普通笔记");
+	$.post("/cloudnote/note/findNote.form",
+		{"cn_notebook_id":notebook_id},
+		function(result){
+			var list = result.data;
+			console.log(list);
+			if(result.success){
+				$(list).each(function(){
+				 var li = '<li class="online"><a class="unchecked"><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i> '+this.cn_note_title+'<button type="button" class="btn btn-default btn-xs btn_position btn_slide_down"><i class="fa fa-chevron-down"></i></button></a><div class="note_menu" tabindex="-1"><dl><dt><button type="button" class="btn btn-default btn-xs btn_move" title="移动至..."><i class="fa fa-random"></i></button></dt><dt><button type="button" class="btn btn-default btn-xs btn_share" title="分享"><i class="fa fa-sitemap"></i></button></dt><dt><button type="button" class="btn btn-default btn-xs btn_delete" title="删除"><i class="fa fa-times"></i></button></dt></dl></div></li>';
+			     $("#second_side_right .contacts-list").append(li);
+				 $("#second_side_right ul li:last").data("note",this);
+				});			
+			}else{
+				alert(result.message);
+			}
+			
+			});		
+}
+
+/***
+ * 查询普通笔记内容
+ */
+function getNoteDetail(li){
+	console.log("查询普通笔记内容");
+	var note = li.data("note");
+	var note_title = note.cn_note_title;
+	var note_body = note.cn_note_body;
+	$("#input_note_title").val(note_title);
+	um.setContent(note_body==null?"":note_body);
+}
+
+/***
+ * 创建普通笔记
+ */
+function createNormalNote(li){
+	alert("创建普通笔记");
+	//获得笔记的title
+	var note_title =$("#input_note").val();
+	//获得笔记本的id
+	console.log(note_title);
+	var notebook = li.data("notebook")
+	console.log(notebook.cn_notebook_id);
+	$.post("/cloudnote/note/saveNote.form",
+		{"cn_notebook_id":notebook.cn_notebook_id,"cn_note_title":note_title},
+		function(result){
+			var note = result.data;
+			console.log(note);
+			if(result.success){
+				//在笔记框里添加新增的笔记
+				 var li = '<li class="online"><a class="unchecked"><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i> '+note_title+'<button type="button" class="btn btn-default btn-xs btn_position btn_slide_down"><i class="fa fa-chevron-down"></i></button></a><div class="note_menu" tabindex="-1"><dl><dt><button type="button" class="btn btn-default btn-xs btn_move" title="移动至..."><i class="fa fa-random"></i></button></dt><dt><button type="button" class="btn btn-default btn-xs btn_share" title="分享"><i class="fa fa-sitemap"></i></button></dt><dt><button type="button" class="btn btn-default btn-xs btn_delete" title="删除"><i class="fa fa-times"></i></button></dt></dl></div></li>';
+			     $("#second_side_right .contacts-list").append(li);
+			     note.cn_note_body =" ";
+				 $("#second_side_right ul li:last").data("note",note);
+				 console.log($("#second_side_right ul li:last").data("note",note));
+				 //模拟单击事件退出alert框
+				 $("#modalBasic_2,.cancle").trigger("click");
+				 //模拟单击时间选中已创建的笔记
+				 $("#second_side_right ul li:last").trigger("click");	 
+			}else{
+				alert(result.message);
+			}
+		});
+	
+}
+
+/***
+ * 更新普通笔记
+ */
+function updateNormalNote(){
+	//获取编辑后的笔记的标题
+	//获取编辑后的笔记内容
+	var li = $("#second_side_right .checked").parent();
+	var note = li.data("note");
+	var title = $("#input_note_title").val();
+	console.log(title);	
+	note.cn_note_title = title;
+	var body = um.getContent();
+	console.log(body);
+	note.cn_note_body = body;
+	$.post("/cloudnote/note/updateNote.form",
+		note,
+		function(result){
+			if(result.success){
+				$("#second_side_right .checked").html('<i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i> '+title+'<button type="button" class="btn btn-default btn-xs btn_position btn_slide_down"><i class="fa fa-chevron-down"></i></button>');
+				$("footer div strong").text("保存成功").parent().fadeIn(100).fadeOut(3000);
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 删除普通笔记
+ */
+function deleteNormalNote(){
+	console.log("删除笔记")
+	var li = $("#second_side_right .checked").parent();
+	var note = li.data("note");
+	console.log(note);
+	$.post("/cloudnote/note/deleteNote.form",
+		note,
+		function(result){
+			if(result.success){
+				//将笔记的li删除
+				li.remove();
+				//模拟退出单击事件
+				 $("#modalBasic_7 .cancle").trigger("click");
+				 //清空笔记内容
+				 $("#input_note_title").val("");
+				um.setContent("");
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 移动笔记
+ */
+function moveNote(notebook_id){
+	var li = $("#second_side_right .checked").parent();
+	var note = li.data("note");
+	if(notebook_id==note.cn_notebook_id)
+		return;
+	//修改cn_notebook_id值为note.cn_notebook_id
+	note.cn_notebook_id = notebook_id
+	$.post("/cloudnote/note/move.form",
+		note,
+		function(result){
+			console.log("进入result")
+			if(result.success){
+				li.remove();
+				 $(".cancle").trigger("click");
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 分享笔记
+ */
+function createShareNote(){
+//	$("footer div strong").text("分享成功").parent().fadeIn(100);
+//	setTimeout(function(){
+//		$("footer div").fadeOut(500);
+//	}, 1500);
+	
+	var li = $("#second_side_right .checked").parent();
+	var note = li.data("note");
+	console.log(note);
+	$.post("/cloudnote/note/share.form",
+		note,
+		function(result){
+			if(result.success){
+				$("footer div strong").text("分享成功").parent().fadeIn(100).fadeOut(3000);
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 查询回收站笔记列表
+ */
+function getRecycleNoteList(){
+	alert("查询回收站笔记列表");
+}
+
+/***
+ * 查看回收站笔记内容
+ */
+function getRecycleNoteDetail() {
+	console.log("查看回收站笔记内容");
+}
+
+/***
+ * 删除回收站笔记
+ */
+function deleteRecycleNote(){
+	alert("删除回收站笔记");
+}
+
+/***
+ * 搜索分享笔记列表
+ */
+function getShareNoteList(n,currentPage){//n为搜索的内容
+	console.log("搜索分享笔记列表");
+	$("#pc_part_1,#pc_part_5,#pc_part_6").show();
+	$("#pc_part_2,#pc_part_3,#pc_part_4,#pc_part_7,#pc_part_8").hide();
+	$('#rollback_button,#like_button,#action_button').removeClass('clicked');
+	$.post("/cloudnote/note/search.form",
+		{"condition":n,"currentPage":currentPage},
+		function(result){
+			list = result.data;
+			console.log(list);
+			if(result.success){
+				//在div中显示搜索的内容
+				$(list).each(
+					function(){
+						var li = '<li class="online"><a href="#"><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>'+this.cn_share_title+'<button type="button" class="btn btn-default btn-xs btn_position btn_like"><i class="fa fa-star-o"></i></button><div class="time"></div></a></li>'
+						$("#sixth_side_right .contacts-list").append(li);	
+						//绑定数据，以便预览笔记使用到
+						$("#sixth_side_right ul li:last").data("share",this);
+					}
+					);
+					
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 查询分享笔记内容
+ */
+function getShareNoteDetail(){
+	console.log("查询分享笔记内容")
+	var li = $("#sixth_side_right .checked").parent();
+	//获取绑定的数据
+	var share = li.data("share");
+	console.log(share);
+	$("#noput_note_title").text(share.cn_share_title);
+	$("#noput_note_body").html(share.ch_share_body);	
+}
+
+/***
+ * 收藏分享笔记
+ */
+function likeShareNote(){
+	console.log("收藏分享笔记");
+	var li = $("#sixth_side_right .checked").parent();
+	var share = li.data("share");
+	console.log(share);
+	$.post("/cloudnote/note/addFavorite.form",
+		share,
+		function(result){
+			if(result.success){
+				//模拟退出事件
+				$(".cancle").trigger("click");	
+				$("#sixth_side_right  .checked  .btn_like").fadeOut();
+				
+			}else{
+				alert(result.message);
+			}
+		});
+}
+
+/***
+ * 加载收藏笔记
+ */
+function getLikeNoteList(likeNoteId){
+	alert("加载收藏笔记");
+}
+
+/***
+ * 查看收藏笔记内容
+ */
+function getLikeNoteDetail(noteId) {
+	console.log("查看收藏笔记内容");
+}
+
+/***
+ * 删除收藏笔记
+ */
+function deleteLikeNote(noteId,dom){
+	alert("删除收藏笔记");
+}
+
+/***
+ * 加载本用户参加活动笔记列表
+ */
+function getNoteActivityList(noteBookId){
+	alert("加载本用户参加活动笔记列表");
+}
+
+/***
+ * 查询参加活动的笔记内容
+ */
+function getActivityNoteDetail(noteId) {
+	console.log("查询参加活动的笔记内容");
+}

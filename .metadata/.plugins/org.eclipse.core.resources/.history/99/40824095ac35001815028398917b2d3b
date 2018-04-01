@@ -1,0 +1,59 @@
+package org.tarena.test;
+
+
+
+import java.sql.Timestamp;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import org.junit.Ignore;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.tarena.dao.UserMapper;
+import org.tarena.entity.User;
+import org.tarena.service.LoginService;
+
+public class TestCase {
+	
+	@Test
+	public void testFindByName(){
+		String conf = "applicationContext.xml";
+		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
+		UserMapper mapper = ac.getBean("userMapper",UserMapper.class);
+		User user = mapper.findByName("zhouj");
+		System.out.println(user.getCn_user_name()+","+user.getCn_user_password());
+	}
+	@Ignore
+	@Test
+	public void testSave(){
+		String conf = "applicationContext.xml";
+		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
+		UserMapper mapper = ac.getBean("userMapper",UserMapper.class);
+		User user = new User();
+		user.setCn_user_desc("鄧超");
+		user.setCn_user_id("222");
+		user.setCn_user_name("dengchao");
+		user.setCn_user_password("1234");
+		user.setCn_user_token(null);
+		mapper.save(user);
+	}
+//	//測試LoginService 中的addUser()方法
+//	@Test
+//	public void testAddUser(){
+//		int i = 1;
+//		String conf = "applicationContext.xml";
+//		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
+//		System.out.println(i=i+1);
+//		LoginService ser = ac.getBean("loginService",LoginService.class);
+//		User user = new User();
+//		user.setCn_user_token(null);
+//		user.setCn_user_name("machao");
+//		user.setCn_user_desc("馬超");
+//		user.setCn_user_password("123456");
+//		ser.addUser(user);
+//	}
+
+
+}

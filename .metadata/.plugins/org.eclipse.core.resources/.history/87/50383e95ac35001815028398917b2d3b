@@ -1,0 +1,92 @@
+package org.tarena.util;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import org.tarena.entity.User;
+import org.tarena.web.Result;
+
+/**
+ *	异常日志记录工具，在系统发生
+ *	异常时用于记录其日志。
+ */
+@Component
+@Aspect
+public class ExceptionLogger {
+
+	@Around("within(com.tarena.web.*)")
+	public Object log(ProceedingJoinPoint p) {
+		Object obj = null;
+		try {
+			obj = p.proceed();//调用目标组件
+		} catch (Throwable e) {
+			Logger logger = 
+				Logger.getLogger(ExceptionLogger.class);
+			//获取request
+			ServletRequestAttributes attrs = 
+				(ServletRequestAttributes) 
+						RequestContextHolder.getRequestAttributes();
+			HttpServletRequest request = attrs.getRequest();
+			//获取用户
+			HttpSession session = request.getSession();
+			User user = (User) session.getAttribute("user");
+			//获取IP
+			String ip = request.getRemoteHost();
+			//获取当前系统时间
+			String now = new SimpleDateFormat(
+					"yyyy-MM-dd HH:mm:ss").format(new Date());
+			//获取类名和方法名
+			String className = p.getTarget().getClass().getName();
+			String methodName = p.getSignature().getName();
+			
+			//拼异常信息的标题
+			StringBuffer sb = new StringBuffer();
+			if(user != null) {
+				sb.append("用户[")
+						.append(user.getCn_user_name())
+						.append("],");
+			}
+			sb.append("IP[")
+					.append(ip)
+					.append("],在[")
+					.append(now)
+					.append("],执行[")
+					.append(className)
+					.append(".")
+					.append(methodName)
+					.append("]时，发生如下异常：");
+			logger.error(sb.toString());
+			
+			//拼异常信息
+			StackTraceElement[] elems = e.getStackTrace();
+			for(StackTraceElement elem : elems) {
+				logger.error("\t" + elem.toString());
+			}
+			
+			//正常执行结束，返回的是Controller返回的Result，
+			//发生异常时我们返回一个封装错误信息的Result。
+			Result result = new Result();
+			result.setSuccess(false);
+			result.setMessage("系统发生错误，请联系管理员.");
+			return result;
+		}
+		
+		//proceed方法返回的是目标组件中方法的返回值，
+		//在当前场景下就是Controller方法的返回值，即
+		//Result，方面组件的方法需要将此值返回，否则
+		//Spring会丢弃该返回值，使得页面无法获取这个值。
+		return obj;
+	}
+	
+}
