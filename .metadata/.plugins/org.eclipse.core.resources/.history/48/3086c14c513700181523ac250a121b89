@@ -1,0 +1,22 @@
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../common/taglib.jsp"%>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <title>错误提醒</title>
+</head>
+<body>
+<%@include file="../common/top.jsp"%>
+<div class="container">
+    <%@include file="../common/blog-header.jsp"%>
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <h1>reqest.getAttribute("err_msg")</h1>
+        </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+<%@include file="../common/footer.jsp"%>
+<%@include file="../common/bottom.jsp"%>
+</body>
+</html>

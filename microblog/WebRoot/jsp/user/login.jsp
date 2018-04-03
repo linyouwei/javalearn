@@ -1,9 +1,11 @@
+
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <! DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/microblog/scripts/common/assets/css/amazeui.min.css" />
-<link rel="stylesheet" href="/microblog/styles/login.css" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/scripts/common/assets/css/amazeui.min.css" />
+<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/login.css" />
 
 </head>
 <body>
@@ -45,9 +47,9 @@
 </div>
 </body>
 <!-- 框架JS -->
-<script src="/microblog/scripts/common/assets/js/jquery.min.js"></script>
-<script src="/microblog/scripts/common/assets/js/amazeui.min.js"></script>
-<script src="/microblog/scripts/common/layer/layer.js"></script>
+<script src="<%=request.getContextPath()%>/scripts/common/assets/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/scripts/common/assets/js/amazeui.min.js"></script>
+<script src="<%=request.getContextPath()%>/scripts/common/layer/layer.js"></script>
 <!-- 页面事件处理JS -->
 <script type="text/javascript" src="/microblog/scripts/login.js"></script>
 </html>

@@ -47,3 +47,7 @@ org.eclipse.core.runtime.OperationCanceledException: null
 	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:703) [org.eclipse.m2e.core_1.6.0.me201603161722.jar:na]
 	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72) [org.eclipse.m2e.core_1.6.0.me201603161722.jar:na]
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+2018-04-03 20:26:22,188 [Worker-12] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: D:\linyouwei\java\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2018-04-03 20:26:26,456 [Worker-12] INFO  org.eclipse.jetty.util.log - Logging initialized @922797ms
+2018-04-03 20:26:28,656 [Worker-6] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
+2018-04-03 20:26:28,762 [Worker-12] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: D:\linyouwei\java\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store

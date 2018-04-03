@@ -29,7 +29,7 @@ function login() {
 //		return;
 //	}
 	$.post(
-		"/microblog/myblog/checklogin.form",
+		"/microblog/webUser/checklogin.form",
 		{"username":username,"password":password},
 		function(result){
 			//map 在后台放入data里面，所以result.data
