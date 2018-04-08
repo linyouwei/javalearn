@@ -24,7 +24,7 @@
                 <a id="js-sign-up-btn" href="/microblog/sign/register.html">注册</a>
             </div>
         </h4>
-        <form action="" method="post" class="am-form">
+        <form action="/microblog//webUser/checklogin.form" method="post" class="am-form">
             <fieldset class="am-form-set">
                 <div class="input-prepend restyle">
                     <input placeholder="你的昵称" type="text" value="" name="username" id="username">
@@ -40,7 +40,7 @@
                 </div>
             </fieldset>
             <div>
-                <input id="sign-in"  name="commit" value="登录" class="sign-up-button" data-disable-with="登录">
+                <input id="sign-in"  type="submit" "commit" value="登录" class="sign-up-button" data-disable-with="登录">
             </div>
         </form>
     </div>

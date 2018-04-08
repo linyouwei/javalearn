@@ -110,20 +110,6 @@
         <url>jdbc:thinksql://&lt;server&gt;:&lt;9075&gt;</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
-        <driverClassName>org.apache.derby.jdbc.ClientDriver</driverClassName>
-        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
-            <string>-666ac00c:16281449151:-7fde</string>
-        </identifier>
-        <jarFileName/>
-        <jarFileNames Indexed="true">
-            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
-                <string>C:\Users\Administrator\.myeclipse\libs\derby_10.10.2.0\derbyclient.jar</string>
-            </Bean>
-        </jarFileNames>
-        <name>MyEclipse Derby</name>
-        <url>jdbc:derby://&lt;host&gt;:&lt;port&gt;/&lt;db&gt;</url>
-    </Bean>
-    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>com.mckoi.JDBCDriver</driverClassName>
         <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
             <string>-15</string>
@@ -172,6 +158,20 @@
         <jarFileNames Indexed="true"/>
         <name>HSQLDB Standalone</name>
         <url>jdbc:hsqldb:&lt;databaseName&gt;</url>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>org.apache.derby.jdbc.ClientDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-61d52248:162752adf09:-7fde</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>C:\Users\Administrator\.myeclipse\libs\derby_10.10.2.0\derbyclient.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>MyEclipse Derby</name>
+        <url>jdbc:derby://&lt;host&gt;:&lt;port&gt;/&lt;db&gt;</url>
     </Bean>
     <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
         <driverClassName>sun.jdbc.odbc.JdbcOdbcDriver</driverClassName>

@@ -1,6 +1,7 @@
 
 
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="org.uclbrt.entity.*" %>
 
 <!doctype html>
 <html>
@@ -39,24 +40,25 @@
         </form>
 
         <div class="am-topbar-right">
-            {% if username %}
+        	<% UserLogin user=(UserLogin)session.getAttribute("user"); 
+        	if(user!=null){%>
             <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
                 <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
-                        data-am-dropdown-toggle>{{ username }} <span class="am-icon-caret-down"></span></button>
+                        data-am-dropdown-toggle> ${user.username}  <span class="am-icon-caret-down"></span></button>
                 <ul class="am-dropdown-content">
                     <li><a href="{% url 'myblog:publish' %}">发布</a></li>
                     <li><a href="{% url 'myblog:setting_basic' %}">设置</a></li>
                     <li><a href="{% url 'myblog:sign_out' %}">退出</a></li>
                 </ul>
             </div>
-            {% else %}
+            <% }else{ %>
             <div class="am-topbar-right">
                 <a href="/myblog/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm color">注册</a>
             </div>
             <div class="am-topbar-right">
                 <a href="/myblog/login" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</a>
             </div>
-            {% endif %}
+           <%} %>
         </div>
     </div>
 </header>

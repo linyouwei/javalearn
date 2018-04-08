@@ -4,10 +4,10 @@
 $(function(){
 
 	//登录
-	$("#sign-in").click(function(){
-		login();
-	});
-		
+//	$("#sign-in").click(function(){
+//		login();
+//	});
+//		
 });
 
 //登陆
@@ -32,19 +32,7 @@ function login() {
 		"/microblog/webUser/checklogin.form",
 		{"username":username,"password":password},
 		function(result){
-			//map 在后台放入data里面，所以result.data
-			var map = result.data;
-			if(result.success){
-				if(map.status==200){
-					location.href="/microblog/topic/index.html";
-				}else if(map.status==301){
-					alert("用户名不正确");
-				}else if(map.status==302){
-					alert("密码错误");
-				}
-			}else{
-				alert(result.message);
-			}
+	
 		}
 		);
 	

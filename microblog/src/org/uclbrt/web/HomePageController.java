@@ -27,8 +27,12 @@ public class HomePageController implements SystemConstant {
 
 	@RequestMapping(value ="/index.form", method = RequestMethod.GET)
 	public String index(UserLogin user, HttpSession session) {
+		//查询博客列表
 		
-		return "../jsp/index/index";
+		return "../jsp/index/index.jsp";
 	}
+
+	
+	
 
 }

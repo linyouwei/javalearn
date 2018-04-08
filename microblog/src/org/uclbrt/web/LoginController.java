@@ -27,13 +27,12 @@ public class LoginController implements SystemConstant {
 	private LoginService loginService;
 
 	@RequestMapping(value ="/register.form", method = RequestMethod.GET)
-	@ResponseBody
-	public Result register(UserLogin user) {
+	public String register(UserLogin user) {
 		if (user == null) {
 			throw new RuntimeException("参数为空");
 		}
 		Map<String, Object> map = loginService.addUser(user);
-		return new Result(map);
+		return "../jsp/user/register";
 	}
 	@RequestMapping(value ="/register.form", method = RequestMethod.POST)
 	@ResponseBody
@@ -56,10 +55,11 @@ public class LoginController implements SystemConstant {
 		Object status = map.get("status");
 		if (status.equals(SUCCESS)) {
 			session.setAttribute("user", map.get("user"));
+			System.out.println("success");
 			return "redirect:/homePage/index.form";
 		}else{
 			session.setAttribute("error", 301);
-			return "redirect:/homePage/index.form";
+			return "../jsp/user/login";
 		}
 		
 	}
