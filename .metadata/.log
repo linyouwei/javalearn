@@ -6003,3 +6003,565 @@ Binding(ALT+CTRL+/,
 
 !ENTRY org.eclipse.core.net 1 0 2018-04-08 17:22:17.776
 !MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+!SESSION 2018-04-08 17:28:27.617 -----------------------------------------------
+eclipse.buildId=14.0.0.Stable-001
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-04-08 17:28:47.556
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.jface 2 0 2018-04-08 17:28:50.450
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-08 17:28:50.450
+!MESSAGE A conflict occurred for CTRL+SHIFT+Z:
+Binding(CTRL+SHIFT+Z,
+	ParameterizedCommand(Command(org.eclipse.angularjs.ui.navigate.open.angular.element,Open Angular Element,
+		Opens an Angular Element in a JavaScript editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bba6542,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+Z,
+	ParameterizedCommand(Command(org.skyway.core.ui.generate,Generate,
+		Generate with Skyway,
+		Category(org.skyway.core.ui.category.views,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14ab3e22,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2018-04-08 17:28:56.650
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-08 17:28:56.650
+!MESSAGE A conflict occurred for ALT+CTRL+/:
+Binding(ALT+CTRL+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2356947a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+/,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.hippieCompletion,Word Completion,
+		Context insensitive completion,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1efec9f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,zh,,system)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:28:57.213
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:28:57.257
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:28:57.265
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:28:57.270
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.605
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.612
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.618
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.626
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.640
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.663
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.670
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.719
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.733
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.744
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.751
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.761
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.767
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.772
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.815
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.827
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.833
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.846
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.851
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.881
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.891
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:02.897
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.906
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.913
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.931
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.946
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:02.985
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.007
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.095
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.134
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.286
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.376
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.449
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.471
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.488
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.508
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.533
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.641
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.649
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.677
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.700
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.706
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.715
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.721
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.735
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.740
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.766
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.776
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.785
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.797
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.807
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.844
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.850
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.859
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.866
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.875
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.886
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.894
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:03.904
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.
+
+!ENTRY com.genuitec.eclipse.dashboard.common 4 0 2018-04-08 17:29:03.912
+!MESSAGE sbootstrap.startbootstrapc.netdna-cdn.com
+!STACK 0
+java.net.UnknownHostException: sbootstrap.startbootstrapc.netdna-cdn.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1148)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.genuitec.eclipse.dashboard.templates.ImageDownloadRunnable.run(ImageDownloadRunnable.java:50)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-08 17:29:03.931
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:59.732
+!MESSAGE System property https.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:59.738
+!MESSAGE System property https.proxyPort is set to 8888 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:59.743
+!MESSAGE System property http.proxyHost is set to 192.168.3.232 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-08 17:29:59.750
+!MESSAGE System property http.proxyPort is set to 8888 but should not be set.

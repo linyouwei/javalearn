@@ -20,27 +20,27 @@ import org.uclbrt.service.LoginService;
 public class TestCase {
 
 	@Test
-	@Ignore
 	public void testSave(){
 		String conf = "applicationContext.xml";
 		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
 		UserLoginMapper mapper = ac.getBean("userLoginMapper",UserLoginMapper.class);
 		UserLogin user = new UserLogin();
-		user.setId(666);
-		user.setUsername("lin");
-		user.setPassword("222");
+		user.setId(333);
+		user.setUsername("gg");
+		user.setPassword("ggggg");
 		user.setCreate_time(new Date());
 		user.setRole_id(3);
 		mapper.save(user);
+		mapper.commit();
 	}
-	@Test
-	public void testget(){
-		String conf = "applicationContext.xml";
-		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
-		DailyMapper mapper = ac.getBean("DailyMapper",DailyMapper.class);
-		System.out.println(mapper);
-		
-	}
+//	@Test
+//	public void testGet(){
+//		String conf = "applicationContext.xml";
+//		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
+//		DailyMapper mapper = ac.getBean("DailyMapper",DailyMapper.class);
+//		System.out.println(mapper);
+//		
+//	}
 	
 	
 

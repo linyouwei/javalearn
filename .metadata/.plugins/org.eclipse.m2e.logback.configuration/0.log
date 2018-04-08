@@ -542,3 +542,5 @@
 2018-04-08 11:55:21,975 [Worker-20] INFO  org.eclipse.jetty.util.log - Logging initialized @4725385ms
 2018-04-08 17:13:55,292 [Worker-12] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
 2018-04-08 17:14:41,371 [Worker-12] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 46089 ms
+2018-04-08 17:29:40,845 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
+2018-04-08 17:30:26,173 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 45333 ms
