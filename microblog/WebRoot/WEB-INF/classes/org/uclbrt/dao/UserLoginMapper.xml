@@ -6,6 +6,10 @@
 		parameterType="string">
 		select * from `USER_LOGIN` where username= #{username};
 	</select>
+	<select id="select" resultType="org.uclbrt.entity.UserLogin"
+		parameterType="int">
+		select * from `USER_LOGIN` where id= #{id};
+	</select>
 	<insert id="save" parameterType="org.uclbrt.entity.UserLogin">
 		insert into `USER_LOGIN` values
 		(#{id},#{username},#{password},#{create_time},#{role_id});

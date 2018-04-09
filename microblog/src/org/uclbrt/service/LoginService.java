@@ -52,8 +52,6 @@ public class LoginService implements SystemConstant {
 		if (user == null) {
 			map.put("status", NAME_ERROR);
 		} else {
-			System.out.println(user.getPassword());
-			System.out.println(Md5Util.md5(password));
 			if (user.getPassword().equals(Md5Util.md5(password))) {
 				map.put("status", SUCCESS);
 				map.put("user", user);

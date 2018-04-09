@@ -544,3 +544,8 @@
 2018-04-08 17:14:41,371 [Worker-12] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 46089 ms
 2018-04-08 17:29:40,845 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
 2018-04-08 17:30:26,173 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 45333 ms
+2018-04-09 09:06:10,263 [Worker-6] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
+2018-04-09 09:10:22,371 [Worker-6] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 252111 ms
+2018-04-09 09:34:17,858 [Worker-18] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: D:\linyouwei\java\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2018-04-09 09:34:17,940 [Worker-18] INFO  org.eclipse.jetty.util.log - Logging initialized @2755694ms
+2018-04-09 09:34:20,791 [Worker-18] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: D:\linyouwei\java\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store

@@ -2,6 +2,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="org.uclbrt.entity.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!doctype html>
 <html>
@@ -64,13 +65,13 @@
 </header>
 <div class="am-g am-g-fixed" id="dataListDiv">
     <div class="am-u-md-9 am-u-sm-12" id="myDailyList">
-        {% for field in dailyList %}
+        <c:forEach items="${requestScope.dailyList}" var="u">
         <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 ">
-            <h1><a href="/myblog/daily/?dailyid={{ field.id }}">{{ field.title }} </a></h1>
-            <p>{{ field.body }}</p>
-            <p>{{ field.user_name }} 发布于 {{ field.create_time|date:"Y-m-d H:i:s"}}</p>
+            <h1><a href="/myblog/daily/?dailyid={{ field.id }}">${u.title }</a></h1>
+            <p>${u.body}</p>
+            ${u.username} 发布于${u.create_time}</p>
         </div>
-        {% endfor %}
+        </c:forEach>
     </div>
     <div class="am-u-md-3 am-u-sm-12">
         <div class="am-g am-g-fixed">

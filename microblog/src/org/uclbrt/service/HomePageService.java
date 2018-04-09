@@ -20,12 +20,12 @@ public class HomePageService implements SystemConstant {
 	@Resource
 	private DailyMapper dailyMapper;
 
-	public Daily getDaily(int userId) {
+	public List<Daily> getDaily(int userId) {
 		
 		// 判断用户名是否存在
 		List<Daily> dailyList=new ArrayList<Daily>();
-		Daily d=  dailyMapper.findAllDaily(userId);
+		List<Daily> d=  dailyMapper.findAllDaily(userId);
 		System.out.println(d);
-		return d;
+		return  d;
 	}
 }

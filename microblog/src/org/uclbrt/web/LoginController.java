@@ -55,7 +55,6 @@ public class LoginController implements SystemConstant {
 		Object status = map.get("status");
 		if (status.equals(SUCCESS)) {
 			session.setAttribute("user", map.get("user"));
-			System.out.println("success");
 			return "redirect:/homePage/index.form";
 		}else{
 			session.setAttribute("error", 301);

@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS `USER_LOGIN`;
-CREATE TABLE `USER_LOGIN`(
- `ID` INT(5) NOT NULL AUTO_INCREMENT ,
-  `USERNAME` VARCHAR(20) NOT NULL,
-  `PASSWORD` VARCHAR(50) NOT NULL ,
-  `CREATE_TIME` DATETIME NOT NULL  ,
-  `ROLE_ID` INT(5) NOT NULL DEFAULT 3,
-  PRIMARY KEY (`ID`)
-) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+drop table if exists `user_login`;
+create table `user_login`(
+  `id` int(5) not null auto_increment ,
+  `user_name` varchar(20) not null,
+  `password` varchar(50) not null ,
+  `created_time` datetime not null  ,
+  `role_id` int(5) not null default 3,
+  primary key (`id`)
+) engine=innodb default charset=utf8;

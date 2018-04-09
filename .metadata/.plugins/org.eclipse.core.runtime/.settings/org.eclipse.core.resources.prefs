@@ -1,7 +1,8 @@
-description.autobuilding=false
+#Mon Apr 09 10:35:25 CST 2018
+version=1
+org.eclipse.jdt.core.classFormatVersion=TN|6077839683810|6079421683810|snyfr|68|5|5|6077839952968
+pathvariable.SKYWAY_WORKSPACE_VARIABLE_PATH=D\:/linyouwei/java
 eclipse.preferences.version=1
 encoding=UTF-8
-org.eclipse.jdt.core.classFormatVersion=TN|6077839683810|6079421683810|snyfr|68|5|5|6077839952968
+description.autobuilding=false
 org.eclipse.jdt.core.interfaceFormat=ZC5|GC5|FGNEG756358|CEB5|QC5|Q5|PQ3
-pathvariable.SKYWAY_WORKSPACE_VARIABLE_PATH=D\:/linyouwei/java
-version=1
