@@ -5,5 +5,4 @@ import org.uclbrt.entity.UserLogin;
 public interface UserLoginMapper {
 	void save(UserLogin user);
 	UserLogin findByName(String username);
-	UserLogin select(int id);
 }

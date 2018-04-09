@@ -27,7 +27,7 @@
         <form action="/microblog//webUser/checklogin.form" method="post" class="am-form">
             <fieldset class="am-form-set">
                 <div class="input-prepend restyle">
-                    <input placeholder="你的昵称" type="text" value="" name="username" id="username">
+                    <input placeholder="你的昵称" type="text" value="" name="userName" id="userName">
                     <i class="am-icon-user"></i>
                 </div>
                 <div class="input-prepend restyle">

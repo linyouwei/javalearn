@@ -12,4 +12,5 @@
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 <fullyQualifiedTypeName name="org.uclbrt.dao.DailyMapper"/>
+<fullyQualifiedTypeName name="org.uclbrt.dao.UserLoginMapper"/>
 </qualifiedTypeNameHistroy>

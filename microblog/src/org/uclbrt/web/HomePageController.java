@@ -34,9 +34,7 @@ public class HomePageController implements SystemConstant {
 		//查询博客列表
 		
 		List<Daily> dailyList = homePageService.getDaily(1);
-		System.out.println(dailyList);
-		map.put("dailyList",dailyList);
-		
+		map.put("dailyList",dailyList);	
 		return "../jsp/index/index";
 	}
 

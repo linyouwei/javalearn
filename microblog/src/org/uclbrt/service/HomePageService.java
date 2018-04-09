@@ -21,11 +21,11 @@ public class HomePageService implements SystemConstant {
 	private DailyMapper dailyMapper;
 
 	public List<Daily> getDaily(int userId) {
-		
 		// 判断用户名是否存在
-		List<Daily> dailyList=new ArrayList<Daily>();
-		List<Daily> d=  dailyMapper.findAllDaily(userId);
-		System.out.println(d);
-		return  d;
+		List<Daily> list=  dailyMapper.getById(userId);
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i).getCreatedTime().getClass());
+		}
+		return  list;
 	}
 }

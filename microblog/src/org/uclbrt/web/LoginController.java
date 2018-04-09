@@ -50,8 +50,8 @@ public class LoginController implements SystemConstant {
 	}
 	
 	@RequestMapping("/checklogin.form")
-	public String toLogin(String username, String password, HttpSession session) {
-		Map<String, Object> map = loginService.checkLogin(username, password);
+	public String toLogin(String userName, String password, HttpSession session) {
+		Map<String, Object> map = loginService.checkLogin(userName, password);
 		Object status = map.get("status");
 		if (status.equals(SUCCESS)) {
 			session.setAttribute("user", map.get("user"));

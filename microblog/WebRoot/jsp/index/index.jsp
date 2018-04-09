@@ -3,6 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="org.uclbrt.entity.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 
 <!doctype html>
 <html>
@@ -45,7 +46,7 @@
         	if(user!=null){%>
             <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
                 <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
-                        data-am-dropdown-toggle> ${user.username}  <span class="am-icon-caret-down"></span></button>
+                        data-am-dropdown-toggle> ${user.userName}  <span class="am-icon-caret-down"></span></button>
                 <ul class="am-dropdown-content">
                     <li><a href="{% url 'myblog:publish' %}">发布</a></li>
                     <li><a href="{% url 'myblog:setting_basic' %}">设置</a></li>
@@ -65,11 +66,14 @@
 </header>
 <div class="am-g am-g-fixed" id="dataListDiv">
     <div class="am-u-md-9 am-u-sm-12" id="myDailyList">
+    	
         <c:forEach items="${requestScope.dailyList}" var="u">
         <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 ">
             <h1><a href="/myblog/daily/?dailyid={{ field.id }}">${u.title }</a></h1>
             <p>${u.body}</p>
-            ${u.username} 发布于${u.create_time}</p>
+            <fmt:parseDate var="dateObj" value="${u.createdTime}" type="DATE" pattern="yyyy-MM-dd"/>
+            <fmt:formatDate var="reTime" value='${dateObj}' pattern='yyyy-MM-dd' />
+            <p>${u.userinfo.userName} 发布于</p>
         </div>
         </c:forEach>
     </div>
