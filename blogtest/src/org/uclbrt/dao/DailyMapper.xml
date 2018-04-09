@@ -32,8 +32,8 @@
  	daily.modified_time,category_id,user_id,
  	user_name,password,user_login.created_time as user_created_time,role_id
  	from 
- 	daily left outer join user_login
- 	where  daily.id=#{id}
+ 	daily left outer join user_login  ON  daily.`id`=user_login.`id`
+ 	where user_id=#{id}
  	</select>     
     
 

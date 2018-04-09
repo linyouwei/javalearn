@@ -11425,3 +11425,226 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.osgi 2 1 2018-04-09 17:51:09.456
 !MESSAGE NLS unused message: ContentFormat_description in: org.hibernate.eclipse.console.HibernateConsoleMessages
+!SESSION 2018-04-09 18:10:34.559 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2018-04-09 18:10:49.667
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-09 18:10:49.667
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@1a83597,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-04-09 18:10:50.139
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-04-09 18:10:50.139
+!MESSAGE Conflict for 'com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug':
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@3b26f3,
+	expression=,sourcePriority=0)
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@17a29ff,
+	expression=,sourcePriority=0)
+
+!ENTRY org.eclipse.team.core 4 0 2018-04-09 18:10:55.103
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project microblog.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project microblog.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2018-04-09 18:10:55.103
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project microblog.
+
+!ENTRY org.eclipse.team.core 4 0 2018-04-09 18:10:55.138
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project Servers.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project Servers.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2018-04-09 18:10:55.138
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project Servers.
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.435
+!MESSAGE NLS unused message: EASIEConstant_text_serverhasbeenshutdown in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.439
+!MESSAGE NLS unused message: CustomDeploymentServer_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.443
+!MESSAGE NLS unused message: CustomDeploymentServer_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.447
+!MESSAGE NLS unused message: CustomDeploymentServer_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.453
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.457
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.461
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.466
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.471
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.475
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.479
+!MESSAGE NLS unused message: ServerConfigAction_menuitem_configure in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.483
+!MESSAGE NLS unused message: ServerStartAction_error_startingserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.488
+!MESSAGE NLS unused message: ServerStartAction_menuitem_debugserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.493
+!MESSAGE NLS unused message: ServerRestartAction_menuitem_restart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.498
+!MESSAGE NLS unused message: ServerRestartAction_server_restart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.502
+!MESSAGE NLS unused message: ServerRestartAction_restart_job_status in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.506
+!MESSAGE NLS unused message: ServerStartAction_menuitem_runserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.511
+!MESSAGE NLS unused message: ServerShutdownAction_menuitem_stop in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.515
+!MESSAGE NLS unused message: ServerStartAction_menuitem_start in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.520
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.524
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.528
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.532
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers3_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.537
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.541
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.546
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.550
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver3_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.555
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_startrestart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.559
+!MESSAGE NLS unused message: ServerShutdownAction_job_shuttingdown_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.564
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.569
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_noenabledservers in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.573
+!MESSAGE NLS unused message: ServerStartAction_error_configurationonstartup in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.577
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_configureserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.582
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.586
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.590
+!MESSAGE NLS unused message: prompt.optclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.595
+!MESSAGE NLS unused message: prompt.preclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.600
+!MESSAGE NLS unused message: prompt.optlibrarypath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.605
+!MESSAGE NLS unused message: LauncherModesPreferencePage_dialog_errorcreatinglaunchconfig_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-09 18:10:55.609
+!MESSAGE NLS unused message: LauncherModesPreferencePage_dialog_errorcreatinglaunchconfig_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.maven.ide.eclipse 4 0 2018-04-09 18:10:59.165
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!STACK 0
+java.io.IOException: Authorization exception retrieving nexus-maven-repository-index.properties
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$WagonFetcher.retrieve(DefaultIndexUpdater.java:681)
+	at org.sonatype.nexus.index.updater.AbstractResourceFetcher.retrieve(AbstractResourceFetcher.java:22)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:493)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:74)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:780)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:954)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:138)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1060)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateIndex(NexusIndexManager.java:1013)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager$1.run(NexusIndexManager.java:624)
+	at org.maven.ide.eclipse.internal.index.IndexUpdaterJob.run(IndexUpdaterJob.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

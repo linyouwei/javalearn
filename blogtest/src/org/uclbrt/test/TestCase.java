@@ -25,7 +25,7 @@ public class TestCase {
 			System.out.println(session);
 			DailyMapper mapper = session.getMapper(DailyMapper.class);
 			List<Daily> list= mapper.getById(1);
-			System.out.println(list);
+	
 			
 
 		} catch (IOException e) {

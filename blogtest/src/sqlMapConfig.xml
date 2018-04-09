@@ -2,16 +2,7 @@
 <!DOCTYPE configuration  
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
 "http://mybatis.org/dtd/mybatis-3-config.dtd">  
-<configuration><!--  
-  
-     加载java的配置文件或者声明属性信息   
-    <properties resource="db.properties">  
-        <property name="db.username" value="123" />  
-    </properties>  
-
-  
-  
-    -->
+<configuration>
     <!-- 配置mybatis的环境信息，与spring整合，该信息由spring来管理 -->  
     <environments default="development">  
         <environment id="development">  
@@ -25,14 +16,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
                 <property name="password" value="111111b" />  
             </dataSource>  
         </environment>  
-    </environments><!--  
-  
-     加载映射文件   
+    </environments>
+    
     <mappers>  
-        <mapper resource="User.xml" />  
-     <mapper resource="mapper/UserMapper.xml" />   
-  
-         批量加载映射文件   
-        <package name="com.itheima.mybatis.mapper" />  
+     <mapper resource="org/uclbrt/dao/DailyMapper.xml" />   
+     <mapper resource="org/uclbrt/dao/UserLoginMapper.xml" />  
     </mappers>  
---></configuration>  
+</configuration>  
