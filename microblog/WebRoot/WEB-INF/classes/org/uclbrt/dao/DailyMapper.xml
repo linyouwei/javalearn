@@ -59,5 +59,12 @@
  	FROM 
  	daily LEFT OUTER JOIN user_login  ON  daily.`user_id`=user_login.`id` where user_id=#{id} ORDER BY d_created_time DESC  LIMIT 5
  	</select> 
+ 	<select id="getUserArchivesDate" parameterType="int" resultType="java.util.HashMap">
+ 	SELECT COUNT(*) AS count, DATE_FORMAT( created_time, '%Y-%m') AS created_time FROM `daily`  where user_id =#{id} GROUP BY DATE_FORMAT( created_time, '%Y-%m')  ORDER BY created_time DESC	
+	</select> 
+	<select id="getUserCategoryList" parameterType="int" resultType="java.util.HashMap">
+		SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
+
+	</select> 
  	
 </mapper>

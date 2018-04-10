@@ -24,7 +24,6 @@ public class HomePageService implements SystemConstant {
 		// 判断用户名是否存在
 		List<Daily> list=  dailyMapper.getById(userId);
 		for(int i=0;i<list.size();i++){
-			System.out.println(list.get(i).getCreatedTime().getClass());
 		}
 		return  list;
 	}
@@ -41,6 +40,24 @@ public class HomePageService implements SystemConstant {
 	public List<Daily> findUserRecentDaily(int id ) {
 		// 判断用户名是否存在
 		List<Daily> list=  dailyMapper.findUserRecentDaily(id);
+		return  list;
+	}
+	public List<Map> getUserArchivesDate(int id ) {
+		// 判断用户名是否存在
+		HashMap<String,String> map = new HashMap<String,String>();
+		List<Map> list=  dailyMapper.getUserArchivesDate(id);
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i));
+		}
+		return  list;
+	}
+	public List<Map> getUserCategoryList(int id ) {
+		// 判断用户名是否存在
+		HashMap<String,String> map = new HashMap<String,String>();
+		List<Map> list=  dailyMapper.getUserCategoryList(id);
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i));
+		}
 		return  list;
 	}
 }

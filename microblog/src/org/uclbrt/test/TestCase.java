@@ -5,7 +5,9 @@ package org.uclbrt.test;
 import java.io.IOException;
 import java.io.Reader;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -38,14 +40,14 @@ public class TestCase {
 //		user.setRole_id(3);
 //		mapper.save(user);
 //	}
-	@Test
+	/*@Test
 	public void testGET(){
 		String conf = "applicationContext.xml";
 		ApplicationContext ac = new ClassPathXmlApplicationContext(conf);
 		DailyMapper mapper = ac.getBean("DailyMapper",DailyMapper.class);
 		System.out.println(mapper);
 		
-	}
+	}*/
 	
 //	public void testAssociation() throws IOException{ 
 //		//配置文件的名称  
@@ -57,7 +59,16 @@ public class TestCase {
 //        //获得session实例  
 //        SqlSession session =sqlSessionFactory.openSession();   
 //	}
-	
+	@Test
+	public void testDemo() {
+		List<Map> list = new ArrayList<Map>();
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		map.put(1,"123");
+		list.add(map);
+		System.out.println(list);
+		
+	}
+
 
 
 	

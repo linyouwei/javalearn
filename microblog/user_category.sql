@@ -1,8 +1,11 @@
-DROP TABLE IF EXISTS `USER_CATEGORY`;
-CREATE TABLE `USER_CATEGORY`(
-  `ID` INT(5) NOT NULL AUTO_INCREMENT ,
-  `USER_LOGIN_ID` INT(5) NOT NULL,
-  `CATEGORY_NAME` VARCHAR(50) NOT NULL,
-   `IS_DELETE` TINYINT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`ID`)
-) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+drop table if exists `user_category`;
+create table `user_category`(
+  `id` int(5) not null auto_increment ,
+  `user_login_id` int(5) not null,
+  `category_name` varchar(50) not null,
+   `is_delete` tinyint not null default 0,
+  primary key (`id`)
+) engine=innodb default charset=utf8;
+
+INSERT  INTO `user_category`(`id`,`user_login_id`,`category_name`,`is_delete`) VALUES (1,1,'计算机',0),(2,1,'it',0),(3,1,'金融',0),(4,1,'a',0),(5,1,'b',0),(6,1,'bbb',0),(7,1,'ccc',0);
+

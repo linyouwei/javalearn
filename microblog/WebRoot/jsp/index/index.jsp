@@ -93,13 +93,13 @@
             <ul>
             	<% 
             	List<Daily> list = (List<Daily>)request.getAttribute("recentDailyList");
-            	boolean flag;
-            	if(list.size()!=0) flag = true;
-            	else flag = false;
+            	boolean dailyflag;
+            	if(list.size()!=0) dailyflag = true;
+            	else dailyflag = false;
             	
             	%>
             	<c:choose>
-            	<c:when test="<%=flag%>">
+            	<c:when test="<%=dailyflag%>">
 	                <c:forEach items="${requestScope.recentDailyList}" var="u">
 	                <li>
 	                    <a href="">${u.title }</a>
@@ -115,25 +115,47 @@
         <div class="am-g am-g-fixed">
             <h3 class="">归档</h3>
             <ul>
-                {% for daily in archives_list %}
-                <li>
-                    <a href="{% url 'myblog:archives' daily.year daily.month %}">{{ daily.year }}年{{ daily.month }}月</a> <span style="color:#0e90d2">{{daily.count}}篇</span>
-                </li>
-                {% empty %}
-                暂无归档！
-                {% endfor %}
+            <% 
+            	List<Map> archivesList = (List<Map>)request.getAttribute("archivesList");
+            	boolean archivesflag;
+            	if(archivesList.size()!=0) archivesflag = true;
+            	else archivesflag = false;
+            	%>
+            <c:choose>
+            	<c:when test="<%=archivesflag%>">
+	                <c:forEach items="${requestScope.archivesList}" var="u">
+	                <li>
+                    <a href="{% url 'myblog:archives' daily.year daily.month %}">${u["created_time"] }</a> <span style="color:#0e90d2">${u["count"] }篇</span>
+               		 </li>
+	                </c:forEach>        
+                </c:when>
+                <c:otherwise>
+               		 <p>暂无归档！</p>
+                </c:otherwise>
+                </c:choose>
             </ul>
         </div>
         <div class="am-g am-g-fixed">
             <h3 class="">分类</h3>
             <ul>
-                {% for category in category_list %}
-                <li>
-                    <a href="{% url 'myblog:category' category.id %}">{{category.name}}</a>
+            <% 
+            	List<Map> userCategoryList = (List<Map>)request.getAttribute("userCategoryList");
+            	boolean categoryflag;
+            	if(archivesList.size()!=0) categoryflag = true;
+            	else categoryflag = false;
+            	%>
+            <c:choose>
+            	<c:when test="<%=categoryflag%>">
+	                <c:forEach items="${requestScope.userCategoryList}" var="u">
+	                 <li>
+                    <a href="{% url 'myblog:category' category.id %}">${u["category_name"] }</a>
                 </li>
-                {% empty %}
-                暂无分类！
-                {% endfor %}
+	                </c:forEach>        
+                </c:when>
+                <c:otherwise>
+               		 <p>  暂无分类！</p>
+                </c:otherwise>
+                </c:choose>
             </ul>
         </div>
     </div>
