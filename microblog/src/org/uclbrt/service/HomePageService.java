@@ -28,4 +28,19 @@ public class HomePageService implements SystemConstant {
 		}
 		return  list;
 	}
+	public List<Daily> getAllDaily() {
+		// 判断用户名是否存在
+		List<Daily> list=  dailyMapper.findAllDaily();
+		return  list;
+	}
+	public List<Daily> findRecentDaily() {
+		// 判断用户名是否存在
+		List<Daily> list=  dailyMapper.findRecentDaily();
+		return  list;
+	}
+	public List<Daily> findUserRecentDaily(int id ) {
+		// 判断用户名是否存在
+		List<Daily> list=  dailyMapper.findUserRecentDaily(id);
+		return  list;
+	}
 }

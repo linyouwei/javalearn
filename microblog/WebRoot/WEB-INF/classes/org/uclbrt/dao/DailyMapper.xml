@@ -34,5 +34,30 @@
  	from 
  	daily left outer join user_login  ON  daily.`user_id`=user_login.`id`
  	where user_id=#{id}
- 	</select>     
+ 	</select>  
+ 	<select id="findAllDaily" resultMap="dailyResultMap">
+ 	select daily.id as d_id,
+ 	title,body,daily.created_time as d_created_time,
+ 	daily.modified_time,category_id,user_id,
+ 	user_name,password,user_login.created_time as user_created_time,role_id
+ 	from 
+ 	daily left outer join user_login  ON  daily.`user_id`=user_login.`id`
+ 	</select>    
+ 	<select id="findRecentDaily" resultMap="dailyResultMap">
+ 	SELECT daily.id AS d_id,
+ 	title,body,daily.created_time AS d_created_time,
+ 	daily.modified_time,category_id,user_id,
+ 	user_name,PASSWORD,user_login.created_time AS user_created_time,role_id
+ 	FROM 
+ 	daily LEFT OUTER JOIN user_login  ON  daily.`user_id`=user_login.`id` ORDER BY d_created_time DESC  LIMIT 5
+ 	</select> 
+ 	<select id="findUserRecentDaily" parameterType="int" resultMap="dailyResultMap">
+ 	SELECT daily.id AS d_id,
+ 	title,body,daily.created_time AS d_created_time,
+ 	daily.modified_time,category_id,user_id,
+ 	user_name,PASSWORD,user_login.created_time AS user_created_time,role_id
+ 	FROM 
+ 	daily LEFT OUTER JOIN user_login  ON  daily.`user_id`=user_login.`id` where user_id=#{id} ORDER BY d_created_time DESC  LIMIT 5
+ 	</select> 
+ 	
 </mapper>

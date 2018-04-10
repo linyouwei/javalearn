@@ -30,12 +30,29 @@ public class HomePageController implements SystemConstant {
 	private HomePageService homePageService;
 
 	@RequestMapping(value ="/index.form", method = RequestMethod.GET)
-	public String index(ModelMap map) {
-		//查询博客列表
+	public String index(ModelMap map,HttpSession session) {
 		
-		List<Daily> dailyList = homePageService.getDaily(1);
-		map.put("dailyList",dailyList);	
-		return "../jsp/index/index";
+		UserLogin user = (UserLogin) session.getAttribute("user");
+		if(user!=null){
+			//查询该用户的博客列表
+			List<Daily> dailyList = homePageService.getDaily(user.getId());
+			//查询该用户的最新博客
+			List<Daily> recentDailyList = homePageService.findUserRecentDaily(user.getId());
+			//查询该用户的归档
+			List<Daily> archivesList = homePageService.getUserArchivesDate(user.getId());
+			
+			map.put("dailyList",dailyList);	
+			map.put("recentDailyList",recentDailyList);	
+			return "../jsp/index/index";	
+		}else{
+			//查询所有博客列表
+			List<Daily> dailyList = homePageService.getAllDaily();
+			//查询最新博客（整个系统的）
+			List<Daily> recentDailyList = homePageService.findRecentDaily();
+			map.put("dailyList",dailyList);	
+			map.put("recentDailyList",recentDailyList);	
+			return "../jsp/index/index";	
+		}		
 	}
 
 	

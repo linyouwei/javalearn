@@ -44,5 +44,11 @@ public class UserLogin implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	@Override
+	public String toString() {
+		return "UserLogin [createdTime=" + createdTime + ", id=" + id
+				+ ", password=" + password + ", roleId=" + roleId
+				+ ", userName=" + userName + "]";
+	}
 	
 }

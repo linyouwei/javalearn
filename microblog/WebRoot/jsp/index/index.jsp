@@ -4,6 +4,7 @@
 <%@ page import="org.uclbrt.entity.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
+<%@ page language="java" import="java.util.*"%>
 
 <!doctype html>
 <html>
@@ -66,14 +67,23 @@
 </header>
 <div class="am-g am-g-fixed" id="dataListDiv">
     <div class="am-u-md-9 am-u-sm-12" id="myDailyList">
+    	<%--
+    	 List<Daily> list = (List<Daily>)request.getAttribute("dailyList");
+    	 for(int i=0;i<list.size();i++){
+    	 	out.println(list.get(i).getCreatedTime().getClass());
+    	 }
+    	--%>
     	
         <c:forEach items="${requestScope.dailyList}" var="u">
         <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 ">
             <h1><a href="/myblog/daily/?dailyid={{ field.id }}">${u.title }</a></h1>
             <p>${u.body}</p>
+            <%-- 
             <fmt:parseDate var="dateObj" value="${u.createdTime}" type="DATE" pattern="yyyy-MM-dd"/>
             <fmt:formatDate var="reTime" value='${dateObj}' pattern='yyyy-MM-dd' />
-            <p>${u.userinfo.userName} 发布于</p>
+            --%>
+            <%--<fmt:formatDate value="<%=new Date() %>" type="date" pattern="yyyy-MM-dd"/> --%>
+            <p>${u.userinfo.userName} 发布于 ${u.createdTime}</p>
         </div>
         </c:forEach>
     </div>
@@ -81,13 +91,25 @@
         <div class="am-g am-g-fixed">
             <h3 class="">最新文章</h3>
             <ul>
-                {% for daily in recent_daily_list %}
-                <li>
-                    <a href="/myblog/daily/?dailyid={{ daily.id }}">{{ daily.title }}</a>
-                </li>
-                {% empty %}
-                暂无文章！
-                {% endfor %}
+            	<% 
+            	List<Daily> list = (List<Daily>)request.getAttribute("recentDailyList");
+            	boolean flag;
+            	if(list.size()!=0) flag = true;
+            	else flag = false;
+            	
+            	%>
+            	<c:choose>
+            	<c:when test="<%=flag%>">
+	                <c:forEach items="${requestScope.recentDailyList}" var="u">
+	                <li>
+	                    <a href="">${u.title }</a>
+	                </li>
+	                </c:forEach>        
+                </c:when>
+                <c:otherwise>
+               		 <p>暂无文章！</p>
+                </c:otherwise>
+                </c:choose>
             </ul>
         </div>
         <div class="am-g am-g-fixed">
