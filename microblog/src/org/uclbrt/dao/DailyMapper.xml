@@ -64,7 +64,8 @@
 	</select> 
 	<select id="getUserCategoryList" parameterType="int" resultType="java.util.HashMap">
 		SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
-
 	</select> 
- 	
+ 	<select id="getCategoryList" parameterType="int" resultType="java.util.HashMap">
+		SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
+	</select> 
 </mapper>

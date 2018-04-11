@@ -54,6 +54,8 @@ public class HomePageController implements SystemConstant {
 			List<Daily> dailyList = homePageService.getAllDaily();
 			//查询最新博客（整个系统的）
 			List<Daily> recentDailyList = homePageService.findRecentDaily();
+			//查询整个系统的分类
+			List<Map> CategoryList = homePageService.getCategoryList(user.getId());
 			map.put("dailyList",dailyList);	
 			map.put("recentDailyList",recentDailyList);	
 			return "../jsp/index/index";	

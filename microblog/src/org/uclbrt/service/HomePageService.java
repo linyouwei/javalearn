@@ -60,4 +60,13 @@ public class HomePageService implements SystemConstant {
 		}
 		return  list;
 	}
+	public List<Map> getCategoryList(int id ) {
+		// 判断用户名是否存在
+		HashMap<String,String> map = new HashMap<String,String>();
+		List<Map> list=  dailyMapper.getCategoryList(id);
+		for(int i=0;i<list.size();i++){
+			System.out.println(list.get(i));
+		}
+		return  list;
+	}
 }
