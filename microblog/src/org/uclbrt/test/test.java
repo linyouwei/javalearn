@@ -1,7 +1,6 @@
 package org.uclbrt.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.uclbrt.entity.Daily;
 
 public class test {
 
@@ -9,8 +8,10 @@ public class test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<String>();
-		System.out.println(123);
+		Daily daily = new Daily();
+		if(daily==null){
+			System.out.println(123);
+		}
 
 	}
 

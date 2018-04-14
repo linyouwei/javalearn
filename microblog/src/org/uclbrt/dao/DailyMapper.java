@@ -11,6 +11,6 @@ public interface DailyMapper {
 	List<Daily> findUserRecentDaily(int userId);
 	List<Map> getUserArchivesDate(int userId);
 	List<Map> getUserCategoryList(int userId);
-	List<Map> getCategoryList(int userId);
+	List<Map> getCategoryList();
 	
 }

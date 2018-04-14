@@ -5,13 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.uclbrt.entity.Daily;
+import org.uclbrt.util.EmptyUtil;
+
 public class test {
 	public static void main(String[] args) {
-		List<Map> list = new ArrayList<Map>();
-		Map<Integer,String> map = new HashMap<Integer,String>();
-		map.put(1,"123");
-		map.put(2,"333");
-		list.add(map);
+		List list = new ArrayList<String>();
+		System.out.println(list);
+		if(EmptyUtil.isNullOrEmpty(list)){
+			System.out.println(44);
+		}else{
+			System.out.println(333);
+		}
 		
 	}
 

@@ -44,7 +44,6 @@ public class LoginService implements SystemConstant {
 	}
 
 	public Map<String, Object> checkLogin(String userName, String password) {
-		System.out.println(userName+password);
 		if (userName == null & password == null)
 			throw new RuntimeException("用户名或密码不能为空");
 		

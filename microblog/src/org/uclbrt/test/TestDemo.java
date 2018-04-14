@@ -5,17 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.uclbrt.util.EmptyUtil;
+
 public class TestDemo {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		List<Map> list = new ArrayList<Map>();
-		Map<Integer,String> map = new HashMap<Integer,String>();
-		map.put(1,"123");
-		list.add(map);
-		System.out.println(list);
+		EmptyUtil.isNullOrEmpty("123")
 	}
 
 }

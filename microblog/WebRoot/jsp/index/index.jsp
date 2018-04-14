@@ -1,7 +1,8 @@
 
 
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="org.uclbrt.entity.*" %>
+<%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="org.uclbrt.entity.*" %>
+<%@page import="org.apache.taglibs.standard.tag.common.core.ChooseTag"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <%@ page language="java" import="java.util.*"%>
@@ -44,45 +45,47 @@
 
         <div class="am-topbar-right">
         	<% UserLogin user=(UserLogin)session.getAttribute("user"); 
-        	if(user!=null){%>
-            <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
-                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
-                        data-am-dropdown-toggle> ${user.userName}  <span class="am-icon-caret-down"></span></button>
-                <ul class="am-dropdown-content">
-                    <li><a href="{% url 'myblog:publish' %}">发布</a></li>
-                    <li><a href="{% url 'myblog:setting_basic' %}">设置</a></li>
-                    <li><a href="{% url 'myblog:sign_out' %}">退出</a></li>
-                </ul>
-            </div>
-            <% }else{ %>
-            <div class="am-topbar-right">
-                <a href="/myblog/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm color">注册</a>
-            </div>
-            <div class="am-topbar-right">
-                <a href="/myblog/login" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</a>
-            </div>
-           <%} %>
+        	boolean loginFlag ;
+        	if(user!=null) loginFlag = true;   
+        	else loginFlag = false; 
+        	%> 
+        	<c:choose>   
+	        	<c:when test="<%=loginFlag%>">	
+		            <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+		                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
+		                        data-am-dropdown-toggle> ${user.userName}  <span class="am-icon-caret-down"></span></button>
+		                <ul class="am-dropdown-content">
+		                    <li><a href="{% url 'myblog:publish' %}">发布</a></li>
+		                    <li><a href="{% url 'myblog:setting_basic' %}">设置</a></li>
+		                    <li><a href="{% url 'myblog:sign_out' %}">退出</a></li>
+		                </ul>
+		            </div>
+	            </c:when>
+	            <c:otherwise>
+		            <div class="am-topbar-right">
+		                <a href="/myblog/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm color">注册</a>
+		            </div>
+		            <div class="am-topbar-right">
+		                <a href="/myblog/login" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</a>
+		            </div>
+	            </c:otherwise>
+           </c:choose>
         </div>
     </div>
 </header>
 <div class="am-g am-g-fixed" id="dataListDiv">
     <div class="am-u-md-9 am-u-sm-12" id="myDailyList">
-    	<%--
-    	 List<Daily> list = (List<Daily>)request.getAttribute("dailyList");
-    	 for(int i=0;i<list.size();i++){
-    	 	out.println(list.get(i).getCreatedTime().getClass());
-    	 }
-    	--%>
-    	
+    <% 
+        String path = request.getContextPath(); 
+        String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+        String name = request.getParameter("name");//用request得到 
+        System.out.println(name);
+%> 
         <c:forEach items="${requestScope.dailyList}" var="u">
         <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 ">
-            <h1><a href="/myblog/daily/?dailyid={{ field.id }}">${u.title }</a></h1>
+            <h1><a href="<%=request.getContextPath()%>/homePage/dailyDetail.form/?dailyId=${u.id }">${u.title }</a>
+            </h1>
             <p>${u.body}</p>
-            <%-- 
-            <fmt:parseDate var="dateObj" value="${u.createdTime}" type="DATE" pattern="yyyy-MM-dd"/>
-            <fmt:formatDate var="reTime" value='${dateObj}' pattern='yyyy-MM-dd' />
-            --%>
-            <%--<fmt:formatDate value="<%=new Date() %>" type="date" pattern="yyyy-MM-dd"/> --%>
             <p>${u.userinfo.userName} 发布于 ${u.createdTime}</p>
         </div>
         </c:forEach>
@@ -94,9 +97,9 @@
             	<% 
             	List<Daily> list = (List<Daily>)request.getAttribute("recentDailyList");
             	boolean dailyflag;
-            	if(list.size()!=0) dailyflag = true;
-            	else dailyflag = false;
-            	
+            	if(list==null || list.size()==0) dailyflag = false;
+            	else dailyflag = true;
+
             	%>
             	<c:choose>
             	<c:when test="<%=dailyflag%>">
@@ -118,8 +121,8 @@
             <% 
             	List<Map> archivesList = (List<Map>)request.getAttribute("archivesList");
             	boolean archivesflag;
-            	if(archivesList.size()!=0) archivesflag = true;
-            	else archivesflag = false;
+            	if(archivesList==null ||archivesList.size()==0) archivesflag = false;
+            	else archivesflag = true;
             	%>
             <c:choose>
             	<c:when test="<%=archivesflag%>">
@@ -137,25 +140,54 @@
         </div>
         <div class="am-g am-g-fixed">
             <h3 class="">分类</h3>
+           
             <ul>
-            <% 
-            	List<Map> userCategoryList = (List<Map>)request.getAttribute("userCategoryList");
-            	boolean categoryflag;
-            	if(archivesList.size()!=0) categoryflag = true;
-            	else categoryflag = false;
-            	%>
+           
             <c:choose>
-            	<c:when test="<%=categoryflag%>">
-	                <c:forEach items="${requestScope.userCategoryList}" var="u">
-	                 <li>
-                    <a href="{% url 'myblog:category' category.id %}">${u["category_name"] }</a>
-                </li>
-	                </c:forEach>        
-                </c:when>
-                <c:otherwise>
-               		 <p>  暂无分类！</p>
-                </c:otherwise>
-                </c:choose>
+             <%--  若没登录，显示系统的分类 --%>
+            	<c:when test="<%=!loginFlag%>">
+            	<% 
+	            	List<Map> categoryList = (List<Map>)request.getAttribute("categoryList");
+	            	boolean categoryflag;
+	            	if(categoryList==null||categoryList.size()==0) categoryflag = false;
+	            	else categoryflag = true;	
+            	%>
+	            	<c:choose>
+			            	<c:when test="<%=categoryflag%>">
+				                <c:forEach items="${requestScope.categoryList}" var="u">
+					                 <li>
+				                   		 <a href="">${u["category_name"] }</a>
+				                	</li>
+				                </c:forEach>        
+			                </c:when>
+			                <c:otherwise>
+			               		 <p> 暂无分类！</p>
+			                </c:otherwise>
+	             	</c:choose>
+            	</c:when>
+            	 <%-- 登录则显示个人分类--%>
+            	<c:otherwise>
+		            <% 
+			            List<Map> userCategoryList = (List<Map>)request.getAttribute("userCategoryList");
+			            boolean usercategoryflag;
+			            if(userCategoryList==null||userCategoryList.size()==0) usercategoryflag = false;
+		            	else usercategoryflag = true;
+		            %>
+	           		<c:choose>
+		            	<c:when test="<%=usercategoryflag%>">
+			                <c:forEach items="${requestScope.userCategoryList}" var="u">
+				                 <li>
+			                   		 <a href="{% url 'myblog:category' category.id %}">${u["category_name"] }</a>
+			                	</li>
+			                </c:forEach>        
+		                </c:when>
+		                <c:otherwise>
+		               		 <p>  暂无分类！</p>
+		                </c:otherwise>
+             		</c:choose>
+            	</c:otherwise>
+            </c:choose>
+            
             </ul>
         </div>
     </div>

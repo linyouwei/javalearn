@@ -59,15 +59,19 @@ public class TestCase {
 //        //获得session实例  
 //        SqlSession session =sqlSessionFactory.openSession();   
 //	}
-	@Test
-	public void testDemo() {
-		List<Map> list = new ArrayList<Map>();
-		Map<Integer,String> map = new HashMap<Integer,String>();
-		map.put(1,"123");
-		list.add(map);
-		System.out.println(list);
-		
-	}
+//	@Test
+//	public void testDemo() {
+//		List<Map> list = new ArrayList<Map>();
+//		Map<Integer,String> map = new HashMap<Integer,String>();
+//		map.put(1,"123");
+//		list.add(map);
+//		System.out.println(list);
+//		
+//	}
+
+	
+}
+	
 
 
 

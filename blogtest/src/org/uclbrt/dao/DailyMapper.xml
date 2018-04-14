@@ -63,7 +63,9 @@
  	SELECT COUNT(*) AS count, DATE_FORMAT( created_time, '%Y-%m') AS created_time FROM `daily`  where user_id =#{id} GROUP BY DATE_FORMAT( created_time, '%Y-%m')  ORDER BY created_time DESC	
 	</select> 
 	<select id="getUserCategoryList" parameterType="int" resultType="java.util.HashMap">
-	SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
+		SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
 	</select> 
- 	
+ 	<select id="getCategoryList" resultType="java.util.HashMap">
+		SELECT id,category_name FROM `user_category` WHERE user_login_id = #{id}
+	</select> 
 </mapper>

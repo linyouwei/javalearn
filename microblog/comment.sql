@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS `COMMENT`;
-CREATE TABLE `COMMENT`(
-  `ID` INT(5) NOT NULL AUTO_INCREMENT ,
-  `CONTENT` VARCHAR(200) NOT NULL ,
-  `CREATE_TIME` DATETIME NOT NULL ,
-  `DAILY_ID` INT(5) NOT NULL ,
-    `USER_ID` INT(5) NOT NULL ,
-  PRIMARY KEY (`ID`)
-) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+drop table if exists `comment`;
+create table `comment`(
+  `id` int(5) auto_increment ,
+  `content` varchar(200) not null ,
+  `created_time` datetime not null ,
+  `daily_id` int(5) not null ,
+   `user_id` int(5) not null ,
+  primary key (`id`)
+) engine=innodb default charset=utf8;
