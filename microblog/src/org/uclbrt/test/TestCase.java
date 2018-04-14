@@ -20,8 +20,11 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.uclbrt.dao.CommentMapper;
 import org.uclbrt.dao.DailyMapper;
 import org.uclbrt.dao.UserLoginMapper;
+import org.uclbrt.entity.Comment;
+import org.uclbrt.entity.Daily;
 import org.uclbrt.entity.UserLogin;
 import org.uclbrt.service.LoginService;
 
@@ -68,10 +71,43 @@ public class TestCase {
 //		System.out.println(list);
 //		
 //	}
+	@Test
+	public void testDao() {
+		String conf = "sqlMapConfig.xml";
+		Reader reader;
+		try {
+			reader = Resources.getResourceAsReader(conf);
+			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);  
+			SqlSession session = sqlSessionFactory.openSession();
+			DailyMapper mapper = session.getMapper(DailyMapper.class);
+			Daily list = mapper.getDailyByUserId(1);
+			System.out.println(list.getUserInfo().getUserName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+		
+	}
+//	@Test
+//	public void testDao1() {
+//		String conf = "sqlMapConfig.xml";
+//		Reader reader;
+//		try {
+//			reader = Resources.getResourceAsReader(conf);
+//			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);  
+//			SqlSession session = sqlSessionFactory.openSession();
+//			DailyMapper mapper = session.getMapper(DailyMapper.class);
+//			List<Daily> list = mapper.getDailyListByUserId(1);
+//			for(int i=0;i<list.size();i++){
+//				System.out.println(list.get(i).toString());
+//			}
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}  
+//		
+//	}
 
-	
-}
-	
 
 
 

@@ -1,8 +1,5 @@
 package org.uclbrt.service;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,18 +7,21 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.uclbrt.dao.CommentMapper;
 import org.uclbrt.dao.DailyMapper;
+import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
-import org.uclbrt.util.Md5Util;
 import org.uclbrt.util.SystemConstant;
 
 @Service
 public class HomePageService implements SystemConstant {
 	@Resource
 	private DailyMapper dailyMapper;
+	@Resource
+	private CommentMapper commentMapper;
 
-	public List<Daily> getDaily(int userId) {
-		List<Daily> list=  dailyMapper.getById(userId);
+	public List<Daily> getDailyListByUserId(int userId) {
+		List<Daily> list=  dailyMapper.getDailyListByUserId(userId);
 		return  list;
 	}
 	public List<Daily> getAllDaily() {
@@ -52,6 +52,15 @@ public class HomePageService implements SystemConstant {
 		for(int i=0;i<list.size();i++){
 			System.out.println(list.get(i));
 		}
+		return  list;
+	}
+	public Daily getDailyByUserId(int id) {
+		Daily daily= dailyMapper.getDailyByUserId(id);
+		return  daily;
+	}
+
+	public List<Comment> getCommentByDailyId(int userId) {
+		List<Comment> list=  commentMapper.getCommentByDailyId(userId);
 		return  list;
 	}
 }

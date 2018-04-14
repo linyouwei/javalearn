@@ -13,7 +13,7 @@ public class TestDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		EmptyUtil.isNullOrEmpty("123")
+		EmptyUtil.isNullOrEmpty("123");
 	}
 
 }

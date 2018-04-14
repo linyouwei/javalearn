@@ -12,7 +12,7 @@ public class Daily {
 	private Date modifiedTime;
 	private int categoryId;
 	private int click;
-	private UserLogin userinfo;
+	private UserLogin userInfo;
 	public int getId() {
 		return id;
 	}
@@ -39,8 +39,10 @@ public class Daily {
 	public void setCreatedTime(Date createdTime) {
 		this.createdTime = createdTime;
 	}
-	public Date getModifiedTime() {
-		return modifiedTime;
+	public String getModifiedTime() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+		return sdf.format(modifiedTime);
 	}
 	public void setModifiedTime(Date modifiedTime) {
 		this.modifiedTime = modifiedTime;
@@ -57,10 +59,11 @@ public class Daily {
 	public void setClick(int click) {
 		this.click = click;
 	}
-	public UserLogin getUserinfo() {
-		return userinfo;
+	public UserLogin getUserInfo() {
+		return userInfo;
 	}
-	public void setUserinfo(UserLogin userinfo) {
-		this.userinfo = userinfo;
+	public void setUserInfo(UserLogin userInfo) {
+		this.userInfo = userInfo;
 	}
+	
 }

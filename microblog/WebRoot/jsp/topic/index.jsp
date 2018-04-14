@@ -83,10 +83,10 @@
 %> 
         <c:forEach items="${requestScope.dailyList}" var="u">
         <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 ">
-            <h1><a href="<%=request.getContextPath()%>/homePage/dailyDetail.form/?dailyId=${u.id }">${u.title }</a>
+            <h1><a href="<%=request.getContextPath()%>/homePage/dailyDetail.form?dailyId=${u.id }">${u.title }</a>
             </h1>
             <p>${u.body}</p>
-            <p>${u.userinfo.userName} 发布于 ${u.createdTime}</p>
+            <p>${u.userInfo.userName} 发布于 ${u.createdTime}</p>
         </div>
         </c:forEach>
     </div>

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
 import org.uclbrt.entity.UserLogin;
 import org.uclbrt.service.HomePageService;
@@ -36,7 +37,7 @@ public class HomePageController implements SystemConstant {
 		if(!EmptyUtil.isNullOrEmpty(user)){
 			System.out.println(222);
 			//查询该用户的博客列表
-			List<Daily> dailyList = homePageService.getDaily(user.getId());
+			List<Daily> dailyList = homePageService.getDailyListByUserId(user.getId());
 			//查询该用户的最新博客
 			List<Daily> recentDailyList = homePageService.findUserRecentDaily(user.getId());
 			//查询该用户的归档
@@ -49,7 +50,7 @@ public class HomePageController implements SystemConstant {
 			map.put("recentDailyList",recentDailyList);	
 			map.put("archivesList",archivesList);	
 			map.put("userCategoryList",userCategoryList);	
-			return "../jsp/index/index";	
+			return "../jsp/topic/index";	
 		}else{
 			System.out.println('1');
 			//查询所有博客列表
@@ -62,21 +63,23 @@ public class HomePageController implements SystemConstant {
 			map.put("dailyList",dailyList);	
 			map.put("recentDailyList",recentDailyList);	
 			map.put("categoryList",categoryList);	
-			return "../jsp/index/index";	
+			return "../jsp/topic/index";	
 		}		
 	}
 	@RequestMapping(value ="/dailyDetail.form", method = RequestMethod.GET)
 	public String daily(int dailyId,ModelMap map,HttpSession session) {
-		System.out.println(123);
+		System.out.println("333"+dailyId);
 		UserLogin user = (UserLogin) session.getAttribute("user");
 		if(!EmptyUtil.isNullOrEmpty(user)){
 			//获取daily
+			Daily daily = homePageService.getDailyByUserId(dailyId);
 			//获取评论
-			
-			
+			List<Comment> commentList = homePageService.getCommentByDailyId(user.getId());
+			map.put("daily",daily);	
+			map.put("commentList",commentList);	
+			return "../jsp/topic/detail";	
 		}
-		
-		return "../jsp/index/index";	
+		return "../jsp/topic/index";	
 	}
 
 	

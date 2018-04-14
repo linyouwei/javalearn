@@ -14,11 +14,12 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import org.uclbrt.dao.CommentMapper;
 import org.uclbrt.dao.DailyMapper;
-import org.uclbrt.entity.Daily;
+import org.uclbrt.entity.Comment;
 
 public class TestCase {
-
+//
 //	@Test
 //	public void testSave() {
 //		String conf = "sqlMapConfig.xml";
@@ -39,19 +40,17 @@ public class TestCase {
 //		
 //	}
 	@Test
-	public void testAA() {
+	public void testDao() {
 		String conf = "sqlMapConfig.xml";
 		Reader reader;
 		try {
 			reader = Resources.getResourceAsReader(conf);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);  
 			SqlSession session = sqlSessionFactory.openSession();
-			DailyMapper mapper = session.getMapper(DailyMapper.class);
-			List<Map> list = new ArrayList<Map>();
-			Map<String,String> map = new HashMap<String,String>();
-			list= mapper.getUserCategoryList(1);
+			CommentMapper mapper = session.getMapper(CommentMapper.class);
+			List<Comment> list = mapper.getCommentByDailyId(1);
 			for(int i=0;i<list.size();i++){
-				System.out.println(list.get(i));
+				System.out.println(list.get(i).getUserInfo().getUserName());
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
