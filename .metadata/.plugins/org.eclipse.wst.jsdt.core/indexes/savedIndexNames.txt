@@ -1,7 +1,2 @@
 INDEX VERSION 1.121+D:\linyouwei\java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 615335842.index
-2588053736.index
-3197065454.index
-3379517659.index
-2388873679.index
-2268893273.index

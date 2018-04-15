@@ -1,4 +1,4 @@
-#Mon Apr 09 23:29:26 GMT+08:00 2018
+#Sun Apr 15 14:16:39 CST 2018
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_SPRING_DATA_HOME=D\:/soft/myeclipse/configuration/org.eclipse.osgi/bundles/98/1/.cp/data
 org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_REPORTS_DATA_HOME=D\:/soft/myeclipse/configuration/org.eclipse.osgi/bundles/94/1/.cp/data
@@ -23,8 +23,8 @@ org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_JPA_DATA_HOME=D\:/soft/myeclipse/configuration/org.eclipse.osgi/bundles/92/1/.cp/data
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_HIBERNATE_DATA_HOME=D\:/soft/myeclipse_genuitec/plugins/com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716/myeclipse-data
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=D\:/Program Files/Java/jdk1.8.0_73/src.zip
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=D\:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Users/Administrator/AppData/Local/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Users/Administrator/AppData/Local/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/lib/rt.jar
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_HIBERNATE_HOME=D\:/soft/myeclipse_genuitec/plugins/com.genuitec.org.hibernate.eclipse_3.2.4.CR1-me201003101716/myeclipse-data
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=

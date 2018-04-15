@@ -210,7 +210,7 @@
 			                        <header class="am-comment-hd">
 			                            <!--<h3 class="am-comment-title">评论标题</h3>-->
 			                            <div class="am-comment-meta"> <!-- 评论元数据 -->
-			                                <a href="#link-to-user" class="am-comment-author">${u.userInfo }</a>
+			                                <a href="#link-to-user" class="am-comment-author">${u.userInfo.userName }</a>
 			                                <!-- 评论者 -->
 			                                		评论于
 			                                <time datetime="">${u.createdTime }</time>
@@ -229,8 +229,6 @@
         </ul>
     </div>
 </div>
-
-
 
 
 <div id="comment-template">
