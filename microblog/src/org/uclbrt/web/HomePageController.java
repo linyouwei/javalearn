@@ -81,6 +81,21 @@ public class HomePageController implements SystemConstant {
 		}
 		return "../jsp/topic/index";	
 	}
+	@RequestMapping(value ="/setting.form", method = RequestMethod.GET)
+	public String setting(ModelMap map,HttpSession session) {
+		//获取用户基本信息
+		UserLogin user = (UserLogin) session.getAttribute("user");
+		if(!EmptyUtil.isNullOrEmpty(user)){
+			//获取daily
+			Daily daily = homePageService.getDailyByUserId(dailyId);
+			//获取评论
+			List<Comment> commentList = homePageService.getCommentByDailyId(user.getId());
+			map.put("daily",daily);	
+			map.put("commentList",commentList);	
+			return "../jsp/topic/detail";	
+		}
+		return "../jsp/topic/setting";	
+	}
 
 	
 	

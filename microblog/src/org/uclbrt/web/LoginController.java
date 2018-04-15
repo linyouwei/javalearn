@@ -60,7 +60,11 @@ public class LoginController implements SystemConstant {
 			session.setAttribute("error", 301);
 			return "../jsp/user/login";
 		}
-		
 	}
+	@RequestMapping("/sign_out.form")
+	public String signOut(String password, HttpSession session) {
+			session.removeAttribute("user");
+			return "../jsp/user/login";
+		}
 
 }

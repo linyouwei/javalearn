@@ -22,9 +22,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.uclbrt.dao.CommentMapper;
 import org.uclbrt.dao.DailyMapper;
+import org.uclbrt.dao.UserDetailMapper;
 import org.uclbrt.dao.UserLoginMapper;
 import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
+import org.uclbrt.entity.UserDetail;
 import org.uclbrt.entity.UserLogin;
 import org.uclbrt.service.LoginService;
 
@@ -79,9 +81,9 @@ public class TestCase {
 			reader = Resources.getResourceAsReader(conf);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);  
 			SqlSession session = sqlSessionFactory.openSession();
-			DailyMapper mapper = session.getMapper(DailyMapper.class);
-			Daily list = mapper.getDailyByUserId(1);
-			System.out.println(list.getUserInfo().getUserName());
+			UserDetailMapper mapper = session.getMapper(UserDetailMapper.class);
+			UserDetail list = mapper.findDetailByUserId(1);
+			System.out.println(list);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

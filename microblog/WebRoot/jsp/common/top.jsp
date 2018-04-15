@@ -37,9 +37,9 @@
 		                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
 		                        data-am-dropdown-toggle> ${user.userName}  <span class="am-icon-caret-down"></span></button>
 		                <ul class="am-dropdown-content">
-		                    <li><a href="{% url 'myblog:publish' %}">发布</a></li>
-		                    <li><a href="{% url 'myblog:setting_basic' %}">设置</a></li>
-		                    <li><a href="{% url 'myblog:sign_out' %}">退出</a></li>
+		                    <li><a href="${pageContext.request.contextPath}/homePage/publish.form">发布</a></li>
+		                    <li><a href="${pageContext.request.contextPath}/homePage/setting.form">设置</a></li>
+		                    <li><a href="${pageContext.request.contextPath}/webUser/sign_out.form">退出</a></li>
 		                </ul>
 		            </div>
 	            </c:when>
