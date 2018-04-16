@@ -1,15 +1,20 @@
 package org.uclbrt.web;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
 import org.uclbrt.entity.UserDetail;
@@ -96,6 +101,19 @@ public class HomePageController implements SystemConstant {
 			return "../jsp/topic/setting";	
 		}
 		return "../jsp/topic/setting";	
+	}
+	@RequestMapping(value ="/upload.form", method = RequestMethod.POST)
+	@ResponseBody
+	public String upload(MultipartFile file,HttpServletRequest request)throws IOException {
+		String path = request.getSession().getServletContext().getRealPath("upload");  
+        String fileName = file.getOriginalFilename();    
+        File dir = new File(path,fileName);          
+        if(!dir.exists()){  
+            dir.mkdirs();  
+        }  
+        //MultipartFile自带的解析方法  
+        file.transferTo(dir);  
+        return "ok!";  	
 	}
 
 	

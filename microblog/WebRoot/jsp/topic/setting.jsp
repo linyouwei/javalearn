@@ -28,10 +28,16 @@
             </ul>
         </div>
     </div>
+     <form action="${ctxPath}/homePage/upload.form" method="post" enctype="multipart/form-data">  
+		       		 选择文件:<input type="file" name="file" width="120px">  
+		        	<input type="submit" value="上传">  
+		   		 </form>  
     <div class="am-u-md-9 am-u-sm-12" id="user-list">
         <div class="am-form-group">
             <form method="POST" enctype="multipart/form-data" class="am-form">
                 <fieldset>
+		        
+		    
                     <div class="am-form-group">
                         <img class="avatar " id='avatar'
                              src="${userDetail.img_path}">

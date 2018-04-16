@@ -9723,3 +9723,735 @@ java.lang.NullPointerException
 
 !ENTRY com.genuitec.eclipse.core 2 2 2018-04-17 00:03:17.198
 !MESSAGE Deployment is out of date due to changes in the underlying project contents. You'll need to manually 'Redeploy' the project to update the deployed archive.
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-17 00:39:41.322
+!MESSAGE NLS unused message: WizardNewFileCreationPage_title in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-17 00:39:41.331
+!MESSAGE NLS unused message: WizardNewFileCreationPage_errorTitle in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-17 00:39:41.343
+!MESSAGE NLS unused message: WizardNewFileCreationPage_internalErrorTitle in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-17 00:39:41.352
+!MESSAGE NLS unused message: WizardNewFileCreationPage_internalErrorMessage in: com.genuitec.eclipse.springframework.messages
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:39:48.587
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:39:48.594
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:39:48.594
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:40:29.027
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:40:29.039
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:40:29.039
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:40:33.117
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:40:33.129
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:40:33.129
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:40:49.205
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:40:49.212
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:40:49.212
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:40:57.491
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:40:57.506
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:40:57.506
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:41:10.244
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:41:10.257
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:41:10.257
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:41:15.025
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:41:15.037
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:41:15.037
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:43:23.240
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:43:23.247
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:43:23.247
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:43:36.883
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:43:36.893
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:43:36.893
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:43:53.634
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:43:53.641
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:43:53.641
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-17 00:43:57.857
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-17 00:43:57.870
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-17 00:43:57.870
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
