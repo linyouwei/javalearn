@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
+import org.uclbrt.entity.UserDetail;
 import org.uclbrt.entity.UserLogin;
 import org.uclbrt.service.HomePageService;
 import org.uclbrt.util.EmptyUtil;
@@ -86,13 +87,13 @@ public class HomePageController implements SystemConstant {
 		//获取用户基本信息
 		UserLogin user = (UserLogin) session.getAttribute("user");
 		if(!EmptyUtil.isNullOrEmpty(user)){
-			//获取daily
-			Daily daily = homePageService.getDailyByUserId(dailyId);
+			//获取userDetail
+			UserDetail userDetail = homePageService.findDetailByUserId(user.getId());
 			//获取评论
 			List<Comment> commentList = homePageService.getCommentByDailyId(user.getId());
-			map.put("daily",daily);	
+			map.put("userDetail",userDetail);	
 			map.put("commentList",commentList);	
-			return "../jsp/topic/detail";	
+			return "../jsp/topic/setting";	
 		}
 		return "../jsp/topic/setting";	
 	}

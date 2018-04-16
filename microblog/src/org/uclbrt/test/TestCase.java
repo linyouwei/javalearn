@@ -83,7 +83,7 @@ public class TestCase {
 			SqlSession session = sqlSessionFactory.openSession();
 			UserDetailMapper mapper = session.getMapper(UserDetailMapper.class);
 			UserDetail list = mapper.findDetailByUserId(1);
-			System.out.println(list);
+			System.out.println(list.toString());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -8497,3 +8497,396 @@ java.lang.NullPointerException
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:866)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1069)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-04-16 09:07:49.169 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-04-16 09:07:54.721
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-04-16 09:07:57.885
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jface 2 0 2018-04-16 09:08:22.210
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-16 09:08:22.210
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@1ffaab5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-04-16 09:08:22.427
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-04-16 09:08:22.427
+!MESSAGE Conflict for 'com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug':
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@1145a4,
+	expression=,sourcePriority=0)
+HandlerActivation(commandId=com.genuitec.eclipse.ast.deploy.core.runonservershortcut.debug,
+	handler=org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension$LaunchCommandHandler@10d5e0d,
+	expression=,sourcePriority=0)
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.050
+!MESSAGE NLS unused message: EASIEConstant_text_serverhasbeenshutdown in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.061
+!MESSAGE NLS unused message: CustomDeploymentServer_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.067
+!MESSAGE NLS unused message: CustomDeploymentServer_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.080
+!MESSAGE NLS unused message: CustomDeploymentServer_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.084
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.088
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.092
+!MESSAGE NLS unused message: CustomDeploymentServerSuffixed_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.096
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_typename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.099
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_instanceid in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.103
+!MESSAGE NLS unused message: ExternallyLaunchedServer_server_instancename in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.107
+!MESSAGE NLS unused message: ServerConfigAction_menuitem_configure in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.111
+!MESSAGE NLS unused message: ServerStartAction_error_startingserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.133
+!MESSAGE NLS unused message: ServerStartAction_menuitem_debugserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.162
+!MESSAGE NLS unused message: ServerRestartAction_menuitem_restart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.167
+!MESSAGE NLS unused message: ServerRestartAction_server_restart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.201
+!MESSAGE NLS unused message: ServerRestartAction_restart_job_status in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.217
+!MESSAGE NLS unused message: ServerStartAction_menuitem_runserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.221
+!MESSAGE NLS unused message: ServerShutdownAction_menuitem_stop in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.225
+!MESSAGE NLS unused message: ServerStartAction_menuitem_start in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.229
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.233
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.237
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.240
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_noconfiguredservers3_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.248
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.252
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.256
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.264
+!MESSAGE NLS unused message: ServerDropdownAction_dialog_nodefaultserver3_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.268
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_startrestart in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.272
+!MESSAGE NLS unused message: ServerShutdownAction_job_shuttingdown_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.284
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.289
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_noenabledservers in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.292
+!MESSAGE NLS unused message: ServerStartAction_error_configurationonstartup in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.306
+!MESSAGE NLS unused message: ServerDropdownAction_menuitem_configureserver in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.309
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors1_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.maven.ide.eclipse 4 0 2018-04-16 09:08:25.313
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!STACK 0
+java.io.IOException: Authorization exception retrieving nexus-maven-repository-index.properties
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$WagonFetcher.retrieve(DefaultIndexUpdater.java:681)
+	at org.sonatype.nexus.index.updater.AbstractResourceFetcher.retrieve(AbstractResourceFetcher.java:22)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:493)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:74)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:780)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:954)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:138)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1060)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateIndex(NexusIndexManager.java:1013)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager$1.run(NexusIndexManager.java:624)
+	at org.maven.ide.eclipse.internal.index.IndexUpdaterJob.run(IndexUpdaterJob.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.317
+!MESSAGE NLS unused message: ServerStartAction_dialog_saveeditors2_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.321
+!MESSAGE NLS unused message: prompt.optclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.325
+!MESSAGE NLS unused message: prompt.preclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.329
+!MESSAGE NLS unused message: prompt.optlibrarypath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.333
+!MESSAGE NLS unused message: LauncherModesPreferencePage_dialog_errorcreatinglaunchconfig_title in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 09:08:25.336
+!MESSAGE NLS unused message: LauncherModesPreferencePage_dialog_errorcreatinglaunchconfig_message in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-16 11:09:27.753
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:129)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:136)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:107)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-16 11:09:27.760
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.springframework 2 75 2018-04-16 11:09:27.760
+!MESSAGE Errors running builder 'MyEclipse Spring Project Builder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:129)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:32)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:136)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:293)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:135)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:107)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 17:12:19.675
+!MESSAGE NLS unused message: DeploymentManagerDialog_status_deployment_Sucessful_overwrite_mode_ in: com.genuitec.eclipse.ast.deploy.core.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-04-16 17:12:19.714
+!MESSAGE NLS missing message: DeploymentManagerDialog_status_deployment_Sucessful_overwrite_mode in: com.genuitec.eclipse.ast.deploy.core.messages
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-16 17:37:56.402
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-16 17:37:56.422
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-16 17:37:56.422
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2018-04-16 17:41:46.726
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 75 2018-04-16 17:41:46.734
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 2 75 2018-04-16 17:41:46.734
+!MESSAGE Errors running builder 'DeploymentBuilder' on project 'microblog'.
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentUtil.getOutputFolder(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.Ă(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebDeployment.classChanged(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.WebClassesDeltaVisitor.visit(Unknown Source)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:68)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:79)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:55)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.webProjectBuildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.buildDelta(Unknown Source)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:627)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:170)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:201)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:253)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:256)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:309)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:341)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:140)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

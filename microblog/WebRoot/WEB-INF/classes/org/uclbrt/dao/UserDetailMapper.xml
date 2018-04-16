@@ -6,7 +6,6 @@
     <id property="gender" column="gender" />  
     <id property="img_path" column="img_path" />  
     <id property="birthday" column="birthday" />  
-    <id property="province" column=""province"" />
     <id property="marriage" column="marriage" />  
 	    <association property="userInfo" resultMap="userResult">     
 	    </association>  
@@ -23,15 +22,15 @@
 	            <result property="roleId" column="role_id" />
 	 </resultMap>  
 	  <resultMap id="provinceResult" type="org.uclbrt.entity.Province">
-	  			<id property="id" column="id" />  
+	  			<id property="code" column="p_id" />  
 	            <result property="name" column="p_name" />  
 	 </resultMap>  
 	  <resultMap id="cityResult" type="org.uclbrt.entity.City">
-	  			<id property="id" column="id" />  
+	  			<id property="code" column="c_id" />  
 	            <result property="name" column="c_name" />  
 	 </resultMap>            
     <select id="findDetailByUserId" parameterType="int" resultMap="detailResultMap">
- 	SELECT user_login_id u_id,gender,img_path,birthday,province,city,marriage,user_name,role_id
+ 	SELECT ud.id,user_login_id u_id,gender,img_path,birthday,province p_id,city c_id,marriage,user_name,role_id
 	FROM ((`user_details` ud LEFT JOIN `user_login` ul ON  ud.`user_login_id`=ul.`id`) LEFT JOIN `province` p ON ud.`province`=p.`code` ) LEFT JOIN `city` c 
 	ON ud.`city`=c.`code` WHERE user_login_id=#{id}
  	</select> 

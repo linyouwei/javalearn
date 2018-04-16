@@ -33,13 +33,13 @@
                         <label for="doc-ipt-email-1" class="btn-color">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
                         <input type="text" style="width:40%;display: inline; " class="btn-hollow" placeholder="输入昵称"
                                name="name"
-                               value="{{user_details.username}}" id="nickname">
+                               value="${userDetail.userInfo.userName}" id="nickname">
                     </div>
 
                     <div class="am-form-group">
                         <label for="doc-ipt-pwd-1"
                                class="btn-color">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</label>
-                        <label for="doc-ipt-email-1" class="btn-color">男</label>
+                        <label for="doc-ipt-email-1" class="btn-color">男${userDetail.gender}</label>
 
                         <input type="radio" name="gender" value="0" {% if user_details.gender == 0 %}checked="checked" {% else %}{% endif %}>
                         <label for="doc-ipt-email-1" class="btn-color">女</label>
@@ -48,7 +48,7 @@
 
                     <div class="am-form-group">
                         <label for="doc-ipt-file-1" style="width:40%;display: inline" class="btn-color">出生日期:</label>
-                        <input class="btn-hollow" type="text" value="{{ user_details.birthday|date:'Y-m-d'}}"
+                        <input class="btn-hollow" type="text" value="${userDetail.birthday}"
                                class="am-form-field"
                                id="birth_time"
                                readonly required name="birth_time" style="width:40%;display: inline">
@@ -57,11 +57,11 @@
                     <div>
                         <label for="doc-ipt-file-1" class="btn-color">家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乡:</label>
                         <select id="province" name="province" style="width:40%;display: inline" class="btn-hollow">
-                            <option value="{{distict.p_code}}">{{distict.p_name}}</option>
+                            <option value="{{distict.p_code}}">${userDetail.province.code }</option>
                         </select>
                         <select id="city" name="city" style="width:40%;display: inline" style="display: inline"
                                 class="btn-hollow">
-                            <option value="{{distict.c_code}}">{{distict.c_name}}</option>
+                            <option value="{{distict.c_code}}">${userDetail.city.code }</option>
 
                         </select>
                     </div>

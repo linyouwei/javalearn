@@ -9,8 +9,10 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.uclbrt.dao.CommentMapper;
 import org.uclbrt.dao.DailyMapper;
+import org.uclbrt.dao.UserDetailMapper;
 import org.uclbrt.entity.Comment;
 import org.uclbrt.entity.Daily;
+import org.uclbrt.entity.UserDetail;
 import org.uclbrt.util.SystemConstant;
 
 @Service
@@ -19,6 +21,8 @@ public class HomePageService implements SystemConstant {
 	private DailyMapper dailyMapper;
 	@Resource
 	private CommentMapper commentMapper;
+	@Resource
+	private UserDetailMapper userDetailMapper;
 
 	public List<Daily> getDailyListByUserId(int userId) {
 		List<Daily> list=  dailyMapper.getDailyListByUserId(userId);
@@ -62,5 +66,9 @@ public class HomePageService implements SystemConstant {
 	public List<Comment> getCommentByDailyId(int userId) {
 		List<Comment> list=  commentMapper.getCommentByDailyId(userId);
 		return  list;
+	}
+	public UserDetail findDetailByUserId(int userId) {
+		UserDetail userDetail=  userDetailMapper.findDetailByUserId(userId);
+		return  userDetail;
 	}
 }
