@@ -41,7 +41,7 @@ public class UserDetail implements Serializable {
 	}
 	public String getBirthday() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+		sdf = new SimpleDateFormat("yyyy-MM-dd");
 		return sdf.format(birthday);
 	}
 	public void setBirthday(Date birthday) {
