@@ -27,21 +27,20 @@
                 <li id="accout-manage"><a href="#">账号管理</a></li>
             </ul>
         </div>
-    </div>
-     <form action="${ctxPath}/homePage/upload.form" method="post" enctype="multipart/form-data">  
-		       		 选择文件:<input type="file" name="file" width="120px">  
-		        	<input type="submit" value="上传">  
-		   		 </form>  
+    </div><!--
+     <form id="uploadForm">  
+      <input unselectable="on" type="file"  id="photo" name="photo">更改头像</a></div>
+	</form>  
+    -->
     <div class="am-u-md-9 am-u-sm-12" id="user-list">
         <div class="am-form-group">
             <form method="POST" enctype="multipart/form-data" class="am-form">
                 <fieldset>
-		        
-		    
                     <div class="am-form-group">
                         <img class="avatar " id='avatar'
                              src="${userDetail.img_path}">
-                        <a class="btn btn-hollow"><input unselectable="on" type="file" class="hide" id="photo" name="photo">更改头像</a></div>
+                        <a class="btn btn-hollow"><input unselectable="on" type="file" class="hide" id="photo" name="photo">更改头像</a>
+                    </div>
                     <div class="am-form-group">
                         <label for="doc-ipt-email-1" class="btn-color">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
                         <input type="text" style="width:40%;display: inline; " class="btn-hollow" placeholder="输入昵称"
@@ -71,11 +70,11 @@
                     <div>
                         <label for="doc-ipt-file-1" class="btn-color">家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乡:</label>
                         <select id="province" name="province" style="width:40%;display: inline" class="btn-hollow">
-                            <option value="${userDetail.province.code }">${userDetail.province.code }</option>
+                            <option value="${userDetail.province.code}">${userDetail.province.name }</option>
                         </select>
                         <select id="city" name="city" style="width:40%;display: inline" style="display: inline"
                                 class="btn-hollow">
-                            <option value="${userDetail.city.code }">${userDetail.city.code }</option>
+                            <option value="${userDetail.city.code }">${userDetail.city.name }</option>
 
                         </select>
                     </div>
@@ -117,6 +116,7 @@
 </script>
 <!-- 页面事件处理JS -->
 <script type="text/javascript" src="${ctx}/scripts/setting.js"></script>
+
 
 </body>
 </html>

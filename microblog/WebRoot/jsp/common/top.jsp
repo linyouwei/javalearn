@@ -17,7 +17,7 @@
             <li  class="am-active"><a href="#">消息</a></li>
         </ul>
 
-        <form method="get" action="{% url 'myblog:searchDaily' %}" class="am-topbar-form am-topbar-left am-form-inline" role="search">
+        <form method="get" action="" class="am-topbar-form am-topbar-left am-form-inline" role="search">
             <div class="am-form-group">
                 <input type="text" class="am-form-field am-input-sm"id="search-data" name="searchVal">
                 <input type="submit" class="search-btn" id="search-btn" value="搜索">
@@ -37,18 +37,18 @@
 		                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
 		                        data-am-dropdown-toggle> ${user.userName}  <span class="am-icon-caret-down"></span></button>
 		                <ul class="am-dropdown-content">
-		                    <li><a href="${pageContext.request.contextPath}/homePage/publish.form">发布</a></li>
-		                    <li><a href="${pageContext.request.contextPath}/homePage/setting.form">设置</a></li>
-		                    <li><a href="${pageContext.request.contextPath}/webUser/sign_out.form">退出</a></li>
+		                    <li><a href="${ctx}/homePage/publishEdit.form">发布</a></li>
+		                    <li><a href="${ctx}/homePage/setting.form">设置</a></li>
+		                    <li><a href="${ctx}/webUser/sign_out.form">退出</a></li>
 		                </ul>
 		            </div>
 	            </c:when>
 	            <c:otherwise>
 		            <div class="am-topbar-right">
-		                <a href="/myblog/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm color">注册</a>
+		                <a href="${pageContext.request.contextPath}/webUser/regitster.form" class="am-btn am-btn-primary am-topbar-btn am-btn-sm color">注册</a>
 		            </div>
 		            <div class="am-topbar-right">
-		                <a href="/myblog/login" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</a>
+		                <a href="${pageContext.request.contextPath}/webUser/login.form" class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</a>
 		            </div>
 	            </c:otherwise>
            </c:choose>

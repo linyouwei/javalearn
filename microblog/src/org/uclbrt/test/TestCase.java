@@ -74,7 +74,7 @@ public class TestCase {
 //		
 //	}
 	@Test
-	public void testDao() {
+	public void testDDD() {
 		String conf = "sqlMapConfig.xml";
 		Reader reader;
 		try {
@@ -83,7 +83,8 @@ public class TestCase {
 			SqlSession session = sqlSessionFactory.openSession();
 			UserDetailMapper mapper = session.getMapper(UserDetailMapper.class);
 			UserDetail list = mapper.findDetailByUserId(1);
-			System.out.println(list.toString());
+//			System.out.println(123);
+//			System.out.println(list.getProvince().getName());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

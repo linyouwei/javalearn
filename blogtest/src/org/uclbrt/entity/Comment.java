@@ -22,8 +22,10 @@ public class Comment {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Date getCreatedTime() {
-		return createdTime;
+	public String getCreatedTime() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+		return sdf.format(createdTime);
 	}
 	public void setCreatedTime(Date createdTime) {
 		this.createdTime = createdTime;

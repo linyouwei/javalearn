@@ -61,10 +61,10 @@ public class LoginController implements SystemConstant {
 			return "../jsp/user/login";
 		}
 	}
-	@RequestMapping("/sign_out.form")
+	@RequestMapping(value ="/sign_out.form", method = RequestMethod.GET)
 	public String signOut(String password, HttpSession session) {
 			session.removeAttribute("user");
-			return "../jsp/user/login";
+			return "redirect:/webUser/login.form";
 		}
 
 }

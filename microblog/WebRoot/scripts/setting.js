@@ -1,13 +1,6 @@
  $(function () {
-	 	//上传图片
-        $("#photo").change(function () {
-             ajaxFileUpload();
-        });
-        //提交基础设置资料
-        $("#submit").click(function () {
-        	submitFormData();
-        });
-        //对省份添加option
+	 	
+      //对省份添加option
         addProvinceOption();
         
        //对城市添加option
@@ -22,6 +15,16 @@
             minView: "month",//设置只显示到月份
             autoclose: 1//选择后自动关闭
         });
+        
+        //上传图片
+        $("#photo").change(function () {
+             ajaxFileUpload();
+        });
+        //提交基础设置资料
+        $("#submit").click(function () {
+        	submitFormData();
+        });
+        
          
     }) 
     
@@ -30,7 +33,7 @@ function ajaxFileUpload(){
              $.ajaxFileUpload
             (
                 {
-                    url: '/myblog/uploadImg/', //用于文件上传的服务器端请求地址
+                    url: '/microblog/homePage/thumb.form', //用于文件上传的服务器端请求地址
                     secureuri: false, //是否需要安全协议，一般设置为false
                     fileElementId: 'photo', //文件上传域的ID
                     dataType: 'json', //返回值类型 一般设置为json
@@ -109,7 +112,7 @@ function bindProvinceButton(){
         if (select_val == '0') {
             $("#city").html("<option value='0'>请选择</option>");
         }
-        $.getJSON("${pageContext.request.contextPath}/scripts/common/json/city.json", function (data) {
+        $.getJSON(basePath+"/scripts/common/json/city.json", function (data) {
             var cities = data;
             //遍历city.json，选择省份的code的数据，添加到city中
             $.each(cities, function (index, city) {
